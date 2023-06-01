@@ -1,0 +1,193 @@
+/* utility and economics */
+.azero-img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 538px;
+    height: 538px;
+  }
+  .azero-img::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 1px solid #1b2b38;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .azero-img::after{
+    position: absolute;
+    content: '';
+    width: 87%;
+    height: 87%;
+    border: 1px solid #1b2b38;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .azero-img img {
+    width: 100%;
+    max-width: 55.5%;
+  }
+  .basic-matrics-text {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 20px;
+  }
+  .basic-matrics-text b{
+    padding-left: 15px;
+  }
+  .basic-matrics-text span,.basic-matrics-text b {
+    background: #141f29;
+  }
+  .basic-matrics-text span{
+  padding-right: 15px;
+  }
+  .basic-matrics-text:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: hsla(0,0%,100%,0.07);
+    top: 25px;
+    z-index: -1;
+  }
+  .azero-list {
+    border: 1px solid #1b2b38;
+    display: flex;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .azero-list .number {
+      font-weight: bold;
+      width: 35px;
+      background: #1B2B35;
+      font-size: 20px;
+      color: #415566;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .azero-list h5 {
+      padding: 15px 0px 15px 15px;
+      color: #fff;
+      font-size: 18px;
+      margin: 0px;
+  }
+  .azreo-scnd-row.row.pt-5 {
+    background-image: url(../../assets/token-utility-bg.svg);
+    background-position: center;
+    justify-content: space-between;
+  }
+  .img-icard {
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  .row.market-row {
+    border: 1px solid #1b2b38;
+    border-radius: 2px;
+    padding: 35px 0px;
+  }
+  .row.market-row .side-border::before {
+    left: -13px;
+  }
+  .markets-links {
+    display: flex;
+    justify-content: end;
+    gap: 35px;
+    padding-top: 25px;
+  }
+  .markets-links a{
+    text-decoration: none;
+    color: #00eac7;
+  }
+  .markets-links a svg{
+    margin-right: 15px;
+  }
+  .row.aplh-zro-row {
+    padding: 40px 15px;
+    border: 1px solid #1b2b38;
+  }
+  .row.aplh-zro-row .col-md-6 {
+    padding: 0px 40px;
+  }
+  .text-here h2.side-border.my-0::before {
+      top: 0px;
+      bottom: 0px;
+      height: auto;
+  }
+  .alephzero-market{
+    position: relative;
+    padding-bottom: 120px;
+  }
+  .alephzero-economics{
+    background-color: #111b24;
+  }
+  .table-row.row{
+    display: flex;
+    margin-top: 5.43rem!important;
+  }
+  .table-row.row .left-img-2,.table-row.row .right-img-2{
+    width: auto;
+    padding: 0px;
+  }
+  .inflation-mechanism{
+    padding: 70px 0px;
+  }
+  
+  .vdo-div {
+    position: relative;
+  }
+  
+  .vdo-div button.vdo-btn {
+    border: 0px;
+    background-color: #00eac7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+  }
+  .vdo-div button.vdo-btn svg.bi.bi-play {
+    width: 25px;
+    height: 25px;
+  }
+  .vdo-div .videoIcon{
+    display: none;
+  }
+  .inflation-mechanism .row.aplh-zro-row {
+    align-items: center;
+  }
+  .vdo-modal .modal-dialog{
+    max-width: 1024px;
+  }
+  .vdo-modal .modal-dialog .modal-body {
+    padding: 0px;
+  }
+  button.btn-close {
+    position: absolute;
+    color: #00eac7;
+    font-weight: bold;
+    right: -20px;
+    top: -30px;
+    font-size: 22px;
+  }
+  button.btn-close:hover{
+    color: #00eac7;
+  }
+  /**/

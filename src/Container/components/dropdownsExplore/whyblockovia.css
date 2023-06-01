@@ -310,3 +310,37 @@
     padding: 10px 25px;
     border-radius: 50px;
   }
+
+
+
+
+  .whyblackovia{
+    background-image: url('../../assets/why-alpha-header-bg.svg');
+    width: 100%;
+  }
+  .whyblackovia h3{
+    color:#fff;
+  }
+  .scrollspydata .scroll_spy a {
+  color: #bccbd6;
+  padding: 10px 0;
+  }
+  .scrollspydata h5 {
+  font-size: 24px;
+  font-weight: bold;
+  }
+  .blue-card-sec{
+    background-color: #14202a;
+    padding: 15px 15px;
+  }
+  .check-icon i{
+    color:#00eac7;
+  }
+  .mini-16-head{
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .green-icon i{
+    color:#00eac7;
+  }
+  

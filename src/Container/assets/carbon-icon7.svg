@@ -1,0 +1,23 @@
+<svg width="97" height="96" viewBox="0 0 97 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="48.5" cy="48" r="32.5" stroke="#415566" stroke-dasharray="2 2"/>
+<circle cx="48.5" cy="48" r="23.5" stroke="#1B2B38"/>
+<path d="M65.5 15H31.5V43H35.5V81H61.5V43H65.5V15Z" fill="#111B24"/>
+<path d="M65.5 15H31.5V43H35.5V81H61.5V43H65.5V15Z" fill="#00EAC7" fill-opacity="0.06"/>
+<path d="M65.5 15H31.5V43H35.5V81H61.5V43H65.5V15Z" stroke="#00EAC7" stroke-width="2" stroke-linejoin="bevel"/>
+<path d="M72 22L80 31V68C80 70.4853 77.9853 72.5 75.5 72.5V72.5C73.0147 72.5 71 70.4853 71 68V56.5C71 53.1863 68.3137 50.5 65 50.5H62.5" stroke="white" stroke-linejoin="bevel"/>
+<path d="M76.1109 26.7574C75.3417 27.5965 74.8179 28.6656 74.6057 29.8295C74.3935 30.9933 74.5024 32.1997 74.9187 33.2961C75.3349 34.3925 76.0399 35.3295 76.9444 35.9888C77.8488 36.6481 78.9122 37 80 37L80 31L76.1109 26.7574Z" fill="#111B24" stroke="white" stroke-linejoin="bevel"/>
+<path d="M37 33L37 24.5L41.5 24.5" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M55.5 32.5H51V24.5L55.5 24.5" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M40.5 28.5H37" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M48 24L48 32.5L43 32.5L43 24" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M61.5 32.5L57 32.5L57 24" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M54.5 28.5H51" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M27.5 81H69.5" stroke="#00EAC7" stroke-width="2" stroke-linejoin="bevel"/>
+<path d="M38.5 42.5H58.5" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<circle cx="56" cy="49.5" r="2" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<circle cx="56" cy="56.5" r="2" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<circle cx="56" cy="63.5" r="2" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M84 12.5L75 12.5" stroke="#1B2B38" stroke-linecap="square"/>
+<path d="M84 15.5L75 15.5" stroke="#1B2B38" stroke-linecap="square"/>
+<circle cx="15.5" cy="81" r="3" fill="#1B2B38"/>
+</svg>

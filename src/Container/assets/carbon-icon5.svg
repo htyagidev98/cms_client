@@ -1,0 +1,20 @@
+<svg width="97" height="96" viewBox="0 0 97 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="48.5" cy="48" r="32.5" stroke="#415566" stroke-dasharray="2 2"/>
+<circle cx="48.5" cy="48" r="23.5" stroke="#1B2B38"/>
+<path d="M71.5 19H25.5V78H71.5V19Z" fill="#111B24"/>
+<path d="M71.5 19H25.5V78H71.5V19Z" fill="#00EAC7" fill-opacity="0.06"/>
+<path d="M71.5 19H25.5V78H71.5V19Z" stroke="#00EAC7" stroke-width="2" stroke-linejoin="bevel"/>
+<path d="M25.5 33H71.5" stroke="#00EAC7" stroke-width="2" stroke-linejoin="bevel"/>
+<path d="M29.5 29.5H40.5" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M44 32.5L44 19" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<circle cx="48.5" cy="54" r="14.5" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M57.0749 46.3369L57.3964 46.7199L57.4476 46.0036L57.0749 46.3369ZM57.0749 61.6631L57.4476 61.9964L57.3964 61.2801L57.0749 61.6631ZM54 54C54 51.0774 55.3192 48.4633 57.3964 46.7199L56.7535 45.9539C54.4596 47.8792 53 50.7694 53 54H54ZM57.3964 61.2801C55.3192 59.5367 54 56.9226 54 54H53C53 57.2306 54.4596 60.1208 56.7535 62.0461L57.3964 61.2801ZM56.7022 61.3298C54.6872 63.583 51.7594 65 48.5 65V66C52.0558 66 55.251 64.4528 57.4476 61.9964L56.7022 61.3298ZM48.5 65C42.4249 65 37.5 60.0751 37.5 54H36.5C36.5 60.6274 41.8726 66 48.5 66V65ZM37.5 54C37.5 47.9249 42.4249 43 48.5 43V42C41.8726 42 36.5 47.3726 36.5 54H37.5ZM48.5 43C51.7594 43 54.6872 44.417 56.7022 46.6702L57.4476 46.0036C55.251 43.5472 52.0558 42 48.5 42V43Z" fill="#00EAC7"/>
+<circle cx="64.5" cy="26" r="2.5" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<circle cx="56.5" cy="26" r="2.5" stroke="#00EAC7" stroke-linejoin="bevel"/>
+<path d="M65 66.8848C65 63.437 66.3696 60.1304 68.8076 57.6924L70 56.5V52.5H75V56.5L76.1924 57.6924C78.6304 60.1304 80 63.437 80 66.8848V81.5H65V66.8848Z" fill="#111B24" stroke="white" stroke-linejoin="bevel"/>
+<path d="M84 12.5L75 12.5" stroke="#1B2B38" stroke-linecap="square"/>
+<path d="M84 15.5L75 15.5" stroke="#1B2B38" stroke-linecap="square"/>
+<circle cx="15.5" cy="81" r="3" fill="#1B2B38"/>
+<ellipse cx="75.9135" cy="64.5006" rx="1.38063" ry="4.1725" transform="rotate(-15 75.9135 64.5006)" fill="#111B24" stroke="white" stroke-linejoin="bevel"/>
+<path d="M70 56.5H75" stroke="white" stroke-linejoin="bevel"/>
+</svg>

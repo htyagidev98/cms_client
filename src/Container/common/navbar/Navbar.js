@@ -54,7 +54,7 @@ const Navbar = () => {
                       <li className="mb-3" ><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="https://azero.dev/#/explorer">Wallet <BsArrowUpRight/></NavLink></li>
                       <li className="mb-3" ><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="/staking">Staking</NavLink></li>
                       <li className="mb-3" ><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="https://alephzero.subscan.io/">Explorer <BsArrowUpRight/></NavLink></li>
-                      <li className="mb-3" ><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="#">Ecosystem</NavLink></li>
+                      <li className="mb-3" ><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="/ecosystem">Ecosystem</NavLink></li>
 
                     </ul>
                   </li>

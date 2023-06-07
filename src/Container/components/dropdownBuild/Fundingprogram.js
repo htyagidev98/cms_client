@@ -21,6 +21,11 @@ import fundingDao from '../../assets/funding-dao.svg';
 import fundingTutorial from '../../assets/funding-tutorial.svg'; 
 import fundingMetversa from '../../assets/funding-metvera.svg'; 
 import fundingAws from '../../assets/funding-aws.svg'; 
+import FundingFirstSec from './fundingprogram/FundingFirstSec'
+import FundingSecondSec from './fundingprogram/FundingSecondSec'
+import FundingThirdSec from './fundingprogram/FundingThirdSec'
+import FundingFourthSec from './fundingprogram/FundingFourthSec'
+import FundingFifthSec from './fundingprogram/FundingFifthSec'
 const Fundingprogram = () => {
 return (
 <>
@@ -34,12 +39,7 @@ return (
          <div className="row align-items-center">
             <div className="col-md-6" data-aos="fade-right">
                <div className="staking_data_section">
-                  <h3>
-                     <span className="scalable_span">Ecosystem</span><br/>
-                     <strong>Funding Program</strong>
-                  </h3>
-                  <span className="line_style mb-3"></span>
-                  <p>Learn how the Ecosystem Funding Program initiative supports projects that contribute to the growth and adoption of Aleph Zero ecosystem. </p>
+                 <FundingFirstSec />
                   <button className="scroll_down_img green-btn mt-2"> Apply to EFP </button>
                </div>
             </div>
@@ -115,89 +115,24 @@ return (
             <div className="col-sm-8">
                <div id="section1">
                   <div className="scrollspy-info">
-                     <h4 className='text-white funding-title mb-4'> <span class="common_line me-2"> </span> <span className='f-bold'>The purpose</span> of the program</h4>
-                     <p>
-                        The goal of the Aleph Zero Ecosystem Funding Program is to fund innovations from developer teams that expand the capabilities, functionalities, and adoption of the Aleph Zero blockchain. Project ideas can range from proof-of-concept and early-stage companies to experienced teams with solutions deployed on different platforms.        
-                     </p>
+                    <FundingSecondSec />
                   </div>
                   <div className='funding-program-card mt-5'>
                      <h5 className='ecosystem-heading'>Ecosystem Funding Program</h5>
-                     <div className='row align-items-center mx-auto'>
-                        <div className='col-lg-3 col-12'>
-                           <div className='mini-funding-card'>
-                              <h4>Grant</h4>
-                              <p>by the Aleph Zero Foundation</p>
-                           </div>
-                        </div>
-                        <div className='col-lg-1 col-12'>
-                           <div className='plus-icon text-center'>
-                              <i class="fa-sharp fa-solid fa-plus"></i>
-                           </div>
-                        </div>
-                        <div className='col-lg-3 col-12'>
-                           <div className='mini-funding-card'>
-                              <h4>Incubation</h4>
-                              <p>by the core team and Aleph Zero partner network</p>
-                           </div>
-                        </div>
-                        <div className='col-lg-1 col-12'>
-                           <div className='plus-icon text-center'>
-                              <i class="fa-sharp fa-solid fa-plus"></i>
-                           </div>
-                        </div>
-                        <div className='col-lg-3 col-12'>
-                           <div className='mini-funding-card'>
-                              <h4>Follow-up</h4>
-                              <p>by angel and venture capital investments</p>
-                           </div>
-                        </div>
+                     <div className='row align-items-center mx-auto justify-content-center'>
+                       <FundingThirdSec />
+                      
                      </div>
                   </div>
                </div>
                <div class="b-top-line pt-2 pb-2 mt-5"></div>
                <div id="section2">
                   <div className="scrollspy-info">
-                     <h4 className='text-white funding-title mb-4'> <span class="common_line me-2"> </span> <span className='f-bold'>EFP</span> resources</h4>
-                     <p>
-                        The Ecosystem Funding Program consists of a broad range of initiatives that support the development of your idea–from grants, to know-how.   
-                     </p>
+                    <FundingFourthSec />
                   </div>
                   <div className='epp-cards mt-5'>
                      <div className='row'>
-                        <div className='col-lg-4 col-md-4 col-12'>
-                           <div className='epp-mini-card light-cards'>
-                              <h5 className='text-white funding-title mb-4'>  <span className='f-bold'>Early </span> stage</h5>
-                              <ul>
-                                 <li>Legal and operational workshops</li>
-                                 <li>Early-stage token-free and equity-free grants</li>
-                                 <li>Access to venture capital and angel investors</li>
-                                 <li>Economy design workshops</li>
-                                 <li>Fundraise structuring workshops</li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div className='col-lg-4 col-md-4 col-12'>
-                           <div className='epp-mini-card light-cards'>
-                              <h5 className='text-white funding-title mb-4'>  <span className='f-bold'>R&D </span> stage</h5>
-                              <ul>
-                                 <li>Research and development workshops</li>
-                                 <li>Security design support</li>
-                                 <li>Infrastructure resources</li>
-                                 <li>Code audits</li>
-                                 <li>Front-end product management</li>
-                                 <li>UX workshops</li>
-                              </ul>
-                           </div>
-                        </div>
-                        <div className='col-lg-4 col-md-4 col-12'>
-                           <div className='epp-mini-card light-cards'>
-                              <h5 className='text-white funding-title mb-4'>  <span className='f-bold'>Launch  </span> stage</h5>
-                              <ul>
-                                 <li>Marketing support</li>
-                                 <li>Active community eager to welcome any ambitious project</li>
-                              </ul>
-                           </div>
-                        </div>
+                       <FundingFifthSec />  
                      </div>
                   </div>
                </div>

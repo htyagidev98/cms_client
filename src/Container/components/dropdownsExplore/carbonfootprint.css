@@ -1,0 +1,135 @@
+.border-padding {
+	background-color: #111c26;
+	border: 1px solid  #1b2b38;
+	padding: 50px;
+	transition: all 0.3s linear;
+}
+.carbon-section .scale_top_data h3{
+    color: #fff;
+}
+.carbon-section p{
+    color: #bccbd6;
+    margin-top:40px;
+}
+.carbon-border-card{
+    border: 1px solid #1b2b38;
+    padding:15px;
+    text-align:center;
+    position: relative;
+}
+.carbon-border-card h1{
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    margin:15px 0;
+}
+.carbon-border-card p{
+    color: #8896a1;
+}
+.carbons-cards{
+    margin-top:50px;
+}
+.source-link{
+    position: absolute;
+    top:15px;
+    left:15px;
+    font-size: 10px;
+}
+.source-link i{
+    color: #bccbd6;
+    border:1px solid #bccbd6;
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    line-height: 21px;
+}
+.right-equal::after {
+	content: "≈";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	color: #bccbd6;
+	font-size: 20px;
+	position: absolute;
+	right: -18px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.current-card {
+    border: 1px solid #1b2b38;
+    padding:90px 15px 50px 15px;
+    text-align:center;
+    color:#fff;
+    position: relative;
+}
+.chart-map img{
+    width:100%;
+}
+.current-card h1{
+    font-size:108px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.Green-dot{
+    background-color: #66d16f;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    text-align:left;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.Green-dot{
+    box-shadow:0px 0px 8px 0px #66d16f;
+}
+.arrow-bg-section{
+    background-image:url(../../assets/carbon-arrow.png);
+}
+.simple-text{
+    text-align:center;
+    color:#fff;
+    font-size:22px;
+    font-weight: 300;
+}
+.or-section::after{
+    content: "or";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	color: #bccbd6;
+	font-size: 18px;
+	position: absolute;
+	right: -15px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.dark-blue-bg{
+    background-color: #111b24;
+}
+.border-card{
+    border: 1px solid #1b2b38;
+}
+.wallet_data_sec .wallet_para {
+    color: #bccbd6;
+}
+.more-option a, .more-option a:hover{
+    color: #00eac7;
+}
+.more-option .accordion-header, .more-option .accordion-item {
+    background-color: transparent !important;
+    border:0;
+    box-shadow: unset;
+}
+.accordion-button::after {
+    filter: invert(1);
+}
+.more-option .accordion-header button, .more-option .accordion-header button:focus{
+    border:0px;
+    background-color: transparent !important;
+    outline: 0;
+    box-shadow: unset;
+    padding-left:0px;
+    padding-right:0px;
+}

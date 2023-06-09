@@ -21,6 +21,9 @@ import documentation from '../../../assets/documentation.svg'
 
 
 import Footer from '../../../common/footer/Footer'
+import BuildDevFirstSec from './builddev/BuildDevFirstSec'
+import BuildDevSecondSec from './builddev/BuildDevSecondSec'
+import BuildDevThirdSec from './builddev/BuildDevThirdSec'
 const Builddev = () => {
   return (
    <>
@@ -31,10 +34,7 @@ const Builddev = () => {
        <div className="mini-banner">
          <div className="custom-wrapper">
             <div className="banner-list">
-               <h3 className="m0"><span>Dev</span> portal</h3>
-               <ul>
-                  <li className="m0">Learn all about building on Aleph Zero.</li>
-               </ul>
+             <BuildDevFirstSec />
             </div>
          </div>
       </div>
@@ -46,90 +46,18 @@ const Builddev = () => {
       	<div className="row">
 		      		<div className="col-lg-5 col-md-6 col-12">
 		      			<div className="intro-sec" data-aos="zoom-in-up">
-		      				<h2 className="heading-sec">Into <span>Aleph Zero</span></h2>
-		      				<p className="mt-5">Aleph Zero is a <b>layer 1 blockchain with a highly scalable architecture</b> with its own AlephBFT consensus mechanism. </p>
-							<p>Its sub-second finality makes for seamless experiences for users, while the network remains <b>secure and decentralized.</b></p>
+		      			 <BuildDevSecondSec />
 		      			</div>
 
 		      			<div className="intro-img">
 		      			
-             <img src={blockovia} alt="walletImg" className='img-fluid' />
+                        <img src={blockovia} alt="walletImg" className='img-fluid' />
 		      			</div>
 		      		</div>
 	      		<div className="col-lg-7 col-md-6 col-12">
       				<div className="right-section-intro" data-aos="zoom-in-up">
       					<div className="row">
-      						<div className="col-lg-6 col-md-6 col-12">
-      							<div className="intro-card">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* <img src="images/intro-one.svg"> */}
-                                 <img src={intro} className='img-fluid' />
-
-      								</div>
-      									<h5>What is Aleph Zero</h5>
-      									<p>The basics of what is Aleph Zero and how it works.</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
-
-      						<div className="col-lg-6 col-md-6 col-12">
-      							<div className="intro-card">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* <img src="images/intro-two.svg"> */}
-                                 <img src={intro2} className='img-fluid' />
-
-      								</div>
-      									<h5>Aleph BFT</h5>
-      									<p>The basics of what is Aleph Zero and how it works.</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
-
-      						<div className="col-lg-6 col-md-6 col-12">
-      							<div className="intro-card">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* <img src="images/intro-three.svg"> */}
-                                 <img src={intro3} className='img-fluid' />
-
-      								</div>
-      									<h5>WASM vs. EVM</h5>
-      									<p>The basics of what is Aleph Zero and how it works.</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
-
-      						<div className="col-lg-6 col-md-6 col-12 ">
-      							<div className="intro-card">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* <img src="images/intro-four.svg"> */}
-                                 <img src={intro4} className='img-fluid' />
-
-      								</div>
-      									<h5>Liminal</h5>
-      									<p>The basics of what is Aleph Zero and how it works.</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
+                          <BuildDevThirdSec />      						
       					</div>
       				</div>
 	      		</div>

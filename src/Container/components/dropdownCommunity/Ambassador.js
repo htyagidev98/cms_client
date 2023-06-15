@@ -24,6 +24,14 @@ import Footer from "../../common/footer/Footer";
 import TopDesign from "./TopDesign";
 import JoinSection from "./JoinSection";
 import Separator from "./Separator";
+import AmbassadorFirstSec from "./ambassador/AmbassadorFirstSec";
+import AmbassadorSecondSec from "./ambassador/AmbassadorSecondSec";
+import AmbassadorThirdSec from "./ambassador/AmbassadorThirdSec";
+import AmbassadorFourthSec from "./ambassador/AmbassadorFourthSec";
+import AmbassadorFifthSec from "./ambassador/AmbassadorFifthSec";
+import AmbassadorSixthSec from "./ambassador/AmbassadorSixthSec";
+import AmbassadorSeventhSec from "./ambassador/AmbassadorSeventhSec";
+import AmbassadorEighthSec from "./ambassador/AmbassadorEighthSec";
 
 
 const Ambassador = () => {
@@ -52,27 +60,7 @@ const Ambassador = () => {
         <Container>
           <Row>
             <Col md="6">
-              <div className="ambassodor__left">
-                <h1>
-                  <b>Ambassador</b>
-                  <br /> Program
-                </h1>
-                <div className="ambassodor__text">
-                  <span className="ambassodor__hr">
-                    <span className="line"></span>
-                  </span>
-                  <div className="ambassodor__scroll">
-                    <span>
-                      <ArrowLeftIcon /> &nbsp; Scroll
-                    </span>
-                  </div>
-                  <p>
-                    This is an opportunity for our most enthusiastic,
-                    empathetic, and creative community members to acquire a
-                    special status and help shape the future of Aleph Zero.
-                  </p>
-                </div>
-              </div>
+            <AmbassadorFirstSec defaultOptions={defaultOptions} />
             </Col>
             <Col md="6">
               <div className="ambassodor__right">
@@ -114,198 +102,33 @@ const Ambassador = () => {
         <Container>
           <Row>
             <Col md="5">
-              <div className="purposeSectn__left">
-                <div className="mainHeading">
-                  <small>BACKGROUND</small>
-                  <h2>
-                    <strong>The purpose</strong> of the program
-                  </h2>
-                </div>
-                <div className="purposeSectn__leftcontent">
-                  <p>
-                    Aleph Zero's Brand Ambassadors play an essential role in
-                    educating the wider community and collaborating with the
-                    core team on translations, community management, running
-                    meetups and local conferences, as well as a variety of
-                    different activities. Our Ambassadors also have the
-                    opportunity to beta-test new features of Aleph Zero and its
-                    partner products!
-                  </p>
-                  <p>
-                    The current program will run through 2022, with participants
-                    divided into four cohorts.
-                  </p>
-                  <p>
-                    At the end of every quarter, we'll be evaluating the
-                    submissions from the last three months and reaching out to
-                    selected parties. Once accepted, Ambassadors will remain
-                    with the program as new Ambassadors are onboarded through
-                    the cohorts.
-                  </p>
-                </div>
-
-                <Tilt options={defaultOptions}>
-                  <div className="purposeimg">
-                    <img
-                      src={ambImg5}
-                      alt="ambImg5"
-                      className="purposeimg-1 img-fluid"
-                    />
-                  </div>
-                </Tilt>
-              </div>
+             <AmbassadorSecondSec />
             </Col>
             <Col md="7">
               <div className="purposeSectn__right">
                 <div className="purposeSectn__rt__content">
-                  <h3>
-                    <b>Who</b> are we looking for?
-                  </h3>
+                 <AmbassadorThirdSec />
 
                   <Row>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Proactive leaders</h4>
-                        <p>
-                          with a proven track record of being empathetic and
-                          engaging with others online
-                        </p>
-                      </div>
-                    </Col>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Social media experts</h4>
-                        <p>
-                          who can help us shape the image of Aleph Zero in the
-                          years to come.
-                        </p>
-                      </div>
-                    </Col>
-
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Quality assurance magicians</h4>
-                        <p>
-                          who will battle–test Aleph Zero products before
-                          releasing them to a wider public.
-                        </p>
-                      </div>
-                    </Col>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Relationship builders</h4>
-                        <p>
-                          who can help to boost Aleph Zero’s visibility and
-                          adoption across different industries.
-                        </p>
-                      </div>
-                    </Col>
+                   <AmbassadorFourthSec />
                   </Row>
                 </div>
                 <Separator/>
 
                 <div className="purposeSectn__rt__content">
-                  <h3>
-                    <b>What</b> are the perks?
-                  </h3>
+                 <AmbassadorFifthSec />
 
                   <Row>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Bounties</h4>
-                        <p>
-                          Help us work on the Aleph Zero ecosystem—assist in
-                          tasks such as content, translations, documentation,
-                          and more! Bear in mind that executing certain tasks
-                          comes with remuneration and might require formal
-                          agreements.
-                        </p>
-                      </div>
-                    </Col>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Free Aleph Zero swag</h4>
-                        <p>
-                          Test–drive our branded swag and show your love for the
-                          network in the real world!
-                        </p>
-                      </div>
-                    </Col>
-
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Exclusive NFTs</h4>
-                        <p>
-                          As soon as the NFT infrastructure is ready on Aleph
-                          Zero, you will receive an exclusive NFT as a network
-                          ambassador.
-                        </p>
-                      </div>
-                    </Col>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>In-house collaboration</h4>
-                        <p>
-                          You’ll have a direct line of communication to the
-                          Aleph Zero core team. We hope that some of these
-                          relationships might even convert into opportunities to
-                          officially work together!
-                        </p>
-                      </div>
-                    </Col>
+                  <AmbassadorSixthSec />
                   </Row>
                 </div>
                 <Separator/>
 
                 <div className="purposeSectn__rt__content">
-                  <h3>
-                    <b>What</b> will we require?
-                  </h3>
+                <AmbassadorSeventhSec />
 
                   <Row>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Your availability</h4>
-                        <p>
-                          The Ambassador program requires you to be active —
-                          please make sure you have the capacity to get involved
-                          in it.
-                        </p>
-                      </div>
-                    </Col>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Your awesomeness</h4>
-                        <p>
-                          The Aleph Zero team will be extremely selective when
-                          it comes to building the ambassador program. It will
-                          be divided into several cohorts from which we seek to
-                          select the best and brightest community ambassadors.
-                        </p>
-                      </div>
-                    </Col>
-
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>Your empathy</h4>
-                        <p>
-                          Blockchain is one of the most diverse and experimental
-                          industries globally, and we want to celebrate that
-                          spirit.
-                        </p>
-                      </div>
-                    </Col>
-                    <Col md="6">
-                      <div className="psCard">
-                        <h4>In-house collaboration</h4>
-                        <p>
-                          You’ll have a direct line of communication to the
-                          Aleph Zero core team. We hope that some of these
-                          relationships might even convert into opportunities to
-                          officially work together!
-                        </p>
-                      </div>
-                    </Col>
+                   <AmbassadorEighthSec />
                   </Row>
                 </div>
               </div>

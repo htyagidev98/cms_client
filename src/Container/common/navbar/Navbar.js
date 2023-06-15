@@ -82,7 +82,7 @@ const Navbar = () => {
             </NavLink>
             <ul className="dropdown-menu dropdown_menu">
               <li className="mb-3"><i className="bi bi-amd text-success"></i> <NavLink className="dropdown_item"  to="/social-platforms">Social Platforms</NavLink></li>
-              <li className="mb-3"><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="#">Upcoming Events</NavLink></li>
+              <li className="mb-3"><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="/upcoming-events">Upcoming Events</NavLink></li>
               <div className="dropdown-divider bg-light"></div>
             
               <li className="mb-3"><i className="bi bi-amd text-success"></i><NavLink className="dropdown_item" to="/ambassador">Ambassador Program</NavLink></li>

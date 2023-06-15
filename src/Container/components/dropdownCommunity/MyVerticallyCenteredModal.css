@@ -1,0 +1,157 @@
+.wrap-modal-slider {
+  display: flex;
+  gap: 12px;
+}
+.customModal .modal-body {
+  padding: 0;
+  border-radius: 0;
+}
+.customModal .modal-content {
+  border-radius: 0;
+}
+
+.wrap-modal-slider {
+  display: flex;
+  align-items: flex-start;
+}
+
+.modalItem {
+  flex: 0 0 calc(100% - 400px);
+  max-width: calc(100% - 400px);
+  height: 480px;
+  background: #ddd;
+}
+.modalCaption {
+  width: 400px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.modalSlider {
+  height: 100%;
+}
+.modalSlider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button.modalClose.btn.btn-primary {
+	position: absolute;
+	background: transparent;
+	color: #000;
+	border: 0;
+	padding: 0;
+	right: 15px;
+	color: #00eac7 !important;
+	font-size: 22px;
+	top: 5px;
+}
+
+.modalHeading span {
+  background: #e7ebef;
+  font-size: 12px;
+  padding: 5px 15px;
+  line-height: normal;
+  display: inline-block;
+  border-radius: 4px;
+  color: #415566;
+}
+
+.modalCaption small {
+  letter-spacing: 2px;
+  color: #a9a9a9;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.modalHeading {
+  border-left: 2px solid #00eac7;
+  padding-left: 15px;
+  line-height: normal;
+  margin: 10px 0 15px 0;
+}
+.modalHeading p {
+  margin: 10px 0;
+  font-size: 13px;
+  color: #a9a9a9;
+  letter-spacing: 1px;
+}
+.modalHeading h3 {
+  color: #111b24;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 0 5px 0;
+}
+button.modalBtn.btn.btn-primary {
+  background-color: #00eac7;
+  border-radius: 50px;
+  padding: 10px 25px;
+  border: 0;
+  color: #111b24;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+button.modalBtn.btn.btn-primary svg {
+  margin-left: 5px;
+}
+.modalSlider div {
+  height: 100%;
+}
+.modalSlider .slick-dots {
+  margin: 0;
+  bottom: 30px;
+  width: auto;
+  padding: 5px 15px;
+  background: rgba(12, 19, 26, 0.85);
+  border: 1px solid #1b2b38;
+  left: 15px;
+  border-radius: 30px;
+  display: flex !important;
+  align-items: center;
+  min-width: 166px;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.modalSlider .slick-dots li button:before {
+  color: #bccbd6;
+}
+
+.modalSlider .slick-dots li.slick-active button:before {
+  color: #00eac7;
+  width: 16px;
+  height: 5px;
+  background-color: #00eac7;
+  content: "";
+  top: 8px;
+  border-radius: 5px;
+  left: 5px;
+}
+.modalSlider .slick-dots li button {
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width:991px){
+    .wrap-modal-slider {
+        flex-wrap: wrap;
+    }
+    .wrap-modal-slider .modalItem {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .modalCaption {
+        width: 100%;
+        padding: 22px;
+    }
+    .modalItem{
+        height: 300px;
+    }
+}

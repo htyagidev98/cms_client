@@ -11,19 +11,22 @@ import intro2 from '../../../assets/intro-two.svg'
 import intro3 from '../../../assets/intro-three.svg'
 import intro4 from '../../../assets/intro-four.svg'
 import eco from '../../../assets/eco-circle.png'
-import testnet from '../../../assets/testnet.svg'
-import explorer from '../../../assets/explorer.svg'
-import wallets from '../../../assets/wallet.svg'
-import documentation from '../../../assets/documentation.svg'
-
-
-
-
-
 import Footer from '../../../common/footer/Footer'
 import BuildDevFirstSec from './builddev/BuildDevFirstSec'
 import BuildDevSecondSec from './builddev/BuildDevSecondSec'
 import BuildDevThirdSec from './builddev/BuildDevThirdSec'
+import BuildDevFourthSec from './builddev/BuildDevFourthSec'
+import BuildDevFifthSec from './builddev/BuildDevFifthSec'
+import BuildDevSixthSec from './builddev/BuildDevSixthSec'
+import BuildDevSeventhSec from './builddev/BuildDevSeventhSec'
+import BuildDevEighthSec from './builddev/BuildDevEighthSec'
+import BuildDevNinthSec from './builddev/BuildDevNinthSec'
+import BuildDevTenthSec from './builddev/BuildDevTenthSec'
+import BuildDevEleventhSec from './builddev/BuildDevEleventhSec'
+import BuildDevTwelthSec from './builddev/BuildDevTwelthSec'
+import BuildDevThirteenthSec from './builddev/BuildDevThirteenthSec'
+import BuildDevFourteenthSec from './builddev/BuildDevFourteenthSec'
+import BuildDevFifteenthSec from './builddev/BuildDevFifteenthSec'
 const Builddev = () => {
   return (
    <>
@@ -69,141 +72,28 @@ const Builddev = () => {
 
       <div className="custom-bg tutorial-section section-padding">
       		<div className="custom-wrapper">
-      			<h2 className="heading-sec" data-aos="zoom-in-up"> <span>Developer </span>Resources</h2>
-      			
+                 <BuildDevSixthSec />      			
       			<div className="tutorial-card" data-aos="zoom-in-up">
       			 	<div className="row">
   			 			<div className="col-lg-4 col-md-4 col-12">
   			 				<div className="tutorial-small-card">
-  			 					<h2 className="side-border mt-2">Tutorials</h2>	
+  			 					{/* <h2 className="side-border mt-2">Tutorials</h2>	 */}
+								<BuildDevSeventhSec />
   			 				</div>
   			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="tutorial-small-card filled-card">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<span className="light-badge">Smart contracts</span>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<h4>Create PSP-22 from scratch</h4>
-		 						<p>Make a basic smart contract.</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="tutorial-small-card filled-card">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<span className="light-badge">Smart contracts</span>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<h4>Create PSP-22 using OpenBrush</h4>
-		 						<p>Build the common token standard of PSP-22/ERC-20</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="tutorial-small-card filled-card">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<span className="light-badge">Smart contracts</span>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<h4>Deploy your contracts</h4>
-		 						<p>Learn how to deploy smart contracts on the Testnet Mainnet.</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="tutorial-small-card filled-card">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<span className="light-badge">Smart contracts</span>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<h4>Cross-contract calls</h4>
-		 						<p>Learn how to call other contracts</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="tutorial-small-card filled-card">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<span className="light-badge">DevOps</span>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<h4>Install the dependencies</h4>
-		 						<p>Set up all the prerequisites for your project</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="tutorial-small-card filled-card">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<span className="light-badge">Liminal</span>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<h4>Shielder</h4>
-		 						<p>Experiment with a ZK app</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
+                      <BuildDevEighthSec />  			 			
       			 	</div>
       			</div>	
       			{/* <!--  --> */}
 
       			<div className="tutorial-card">
       			 	<div className="row align-items-end">
-  			 			<div className="col-lg-6 col-md-6 col-12">
-  			 				<div className="tutorial-small-card" data-aos="zoom-in-up">
-  			 					<h2 className="side-border mt-2">Powered by</h2>	
-  			 				</div>
-  			 				<a href="javascript:void(0);">
-  			 				<div className="Powered-by" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec">
- 								<p className="mt-5">Aleph Zero is a <b>layer 1 blockchain with a highly scalable architecture</b> with its own AlephBFT consensus mechanism. </p>
-		 						</div>
-		 						<div className="powered-list">
-		 							<h5>Why did we choose it for Aleph Zero?</h5>
-		 							<ul>
-		 								<li>ink! possesses type and memory safety, which prevents overflows from occurring;</li>
-		 								<li>Existing tools for Rust work for ink!;</li>
-		 								<li>Inheritance by using Rust's traits;</li> 
-		 								<li>Existing libraries may be used if they can be compiled with the no_std feature. This is one of the bigger advantages of ink!.</li>
-		 							</ul>
-		 						</div>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
+  			 			<BuildDevFourthSec />
 
   			 			<div className="col-lg-6 col-md-6 col-12">
-  			 				<a href="javascript:void(0);" className="mb-2">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Create PSP-22 using OpenBrush</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p className="my-1">Find your ways when coming from the Ethereum ecosystem</p>
-  			 				 </div>
-  			 			   </a>
+  			 				<BuildDevFifthSec />
 
-  			 			   <a href="javascript:void(0);">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Create PSP-22 using OpenBrush</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p className="my-1">Find your ways when coming from the Ethereum ecosystem</p>
-  			 				 </div>
-  			 			   </a>
+  			 			  
   			 			</div>
 
       			 	</div>
@@ -214,81 +104,10 @@ const Builddev = () => {
       			 	<div className="row">
   			 			<div className="col-lg-4 col-md-4 col-12">
   			 				<div className="tutorial-small-card" data-aos="zoom-in-up">
-  			 					<h2 className="side-border mt-2">Tools</h2>	
+                               <BuildDevNinthSec />
   			 				</div>
   			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Sol2Ink</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p>Easy migration to ink! from Solidity</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Sol2Ink</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p>Easy migration to ink! from Solidity</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Sol2Ink</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p>Easy migration to ink! from Solidity</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Sol2Ink</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p>Easy migration to ink! from Solidity</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Sol2Ink</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p>Easy migration to ink! from Solidity</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
-
-  			 			<div className="col-lg-4 col-md-4 col-12">
-  			 				<a href="javascript:void(0);">
-  			 				<div className="Powered-by-small-card filled-card" data-aos="zoom-in-up">
-		 						<div className="top-tutorial-sec d-flex justify-space-between">
- 								<h4 className="m-0">Sol2Ink</h4>
- 								<span className="lnr lnr-move"></span>
-		 						</div>
-		 						<p>Easy migration to ink! from Solidity</p>
-  			 				 </div>
-  			 			   </a>
-  			 			</div>
+  	                <BuildDevTenthSec />		 			
       			 	</div>
       			</div>	
       			{/* <!-- //Tools section end --> */}
@@ -296,82 +115,10 @@ const Builddev = () => {
       			{/* <!-- Resource-sec -->/ */}
       			<div className="resource-sec pt-5 pb-5">
       				<div className="container">
-      					<h2 className="heading-sec"><span>Additional </span>Resources</h2>
+                          <BuildDevEleventhSec /> 
       					<div className="row">
-      						<div className="col-lg-3 col-md-6 col-12">
-      							<div className="intro-card" data-aos="fade-up">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* <img src="images/intro-four.svg"/> */}
-                                 <img src={testnet} className='img-fluid' />
+      						<BuildDevTwelthSec />
 
-      								</div>
-      									<h5>Testnet</h5>
-      									<p>Test your smart contracts before going to the Mainnet.</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
-
-      						<div className="col-lg-3 col-md-6 col-12">
-      							<div className="intro-card" data-aos="fade-up">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* {/* <img src="images/intro-four.svg"/> */}
-                                  <img src={explorer} className='img-fluid' />
-
-                                 
-                                 
-                                
-      								</div>
-      									<h5>Explorer</h5>
-      									<p>Explore all the on-chain data. Powered by Subscan.</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
-
-      						<div className="col-lg-3 col-md-6 col-12">
-      							<div className="intro-card" data-aos="fade-up">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* <img src="images/intro-four.svg"/> */}
-                                 <img src={wallets} className='img-fluid' />
-
-      								</div>
-      									<h5>Wallets</h5>
-      									<p>Learn what wallets are available in the Aleph Zero ecosystem</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
-
-      						<div className="col-lg-3 col-md-6 col-12">
-      							<div className="intro-card" data-aos="fade-up">
-      								<div className="intro-content">
-      									<div className="intro-icon">
-      									{/* <img src="images/intro-four.svg"/> */}
-                                 <img src={documentation} className='img-fluid' />
-
-      								</div>
-      									<h5>Documentation</h5>
-      									<p>Read the full developer documentation</p>
-
-      									<div className="poisition-btn">
-      											<button className="green-btn-efect"><span className="lnr lnr-move"></span> Go to</button>
-      									</div>
-      								</div>
-      							</div>
-      						</div>
       					</div>
       				</div>
       			</div>
@@ -384,41 +131,13 @@ const Builddev = () => {
       					<div className="row align-items-center">
       						<div className="col-lg-3 col-md-2 col-12">
       							<div className="up-to-date-heading">
-      								<h2 className="side-border"><span>Stay </span>up to date</h2>
+                                  <BuildDevThirteenthSec /> 
       							</div>
       						</div>
 
-      						<div className="col-lg-3 col-md-2 col-12">
-      							<div className="date-cards">
-									<div className='d-flex justify-space-between'>
-									<h4><span className="lnr lnr-book"></span> <BsDiscord/> Discord</h4>
-									<span className="lnr lnr-move"></span>
-									</div>
-      								<p>Join #sc-support channel</p>
-      							</div>
-      						</div>
+      						<BuildDevFourteenthSec />
 
-      						<div className="col-lg-3 col-md-2 col-12">
-      							<div className="date-cards">
-      							<div className='d-flex justify-space-between'>
-									<h4><span className="lnr lnr-book"></span><BsGithub/> Github</h4>
-									  <span className="lnr lnr-move"></span>
-									  </div>
-
-      								<p>The main code repository</p>
-      							</div>
-      						</div>
-
-      						<div className="col-lg-3 col-md-2 col-12">
-      							<div className="date-cards">
-								  <div className='d-flex justify-space-between'>
-      								<h4><span className="lnr lnr-sync"></span> Change Log</h4>
-									  <span className="lnr lnr-move"></span>
-									  </div>
-
-      								<p>See the latest changes</p>
-      							</div>
-      						</div>
+      					
       					</div>
       				</div>
       			</div>
@@ -432,8 +151,7 @@ const Builddev = () => {
       					<div className="row align-items-center">
       						<div className="col-lg-6 col-md-6 col-12">
       							<div className="left-sec-content" data-aos="fade-right">
-      								<h2 className="heading-sec"><span>Ecosystem </span>Funding Program</h2>
-      								<p className="mt-5">Have you mastered Aleph Zero already? The Aleph Zero Foundation welcomes developers in an Ecosystem Funding Program designed to support startups and ideas built on top of the network. Learn more and apply!</p>
+      								<BuildDevFifteenthSec />
       								<button className="btn btn-green">Learn More</button>
       							</div>
       						</div>

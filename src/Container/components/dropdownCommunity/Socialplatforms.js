@@ -43,11 +43,6 @@ import decorationBg from "../../assets/hero-ambassadors-decorations.png";
 
 import ecosystem from "../../assets/ecosystem.png";
 import bugbounty from "../../assets/bug-bounty.png";
-import news1 from "../../assets/news1.jpg";
-import avtar from "../../assets/avtar.jpeg";
-import avtar2 from "../../assets/avtar2.png";
-import news2 from "../../assets/news2.jpeg";
-import news3 from "../../assets/news3.jpeg";
 import CardNews from "./CardNews";
 
 import video1 from "../../assets/video1.jpg";
@@ -57,6 +52,15 @@ import CardVideo from "./CardVideo";
 import ModalVideo from 'react-modal-video'
 import '../../../../node_modules/react-modal-video/scss/modal-video.scss';
 import { Github } from "react-bootstrap-icons";
+import SocialPlateformFirstSec from "./socialplateform/SocialPlateformFirstSec";
+import SocialPlateformSecondSec from "./socialplateform/SocialPlateformSecondSec";
+import SocialPlateformThirdSec from "./socialplateform/SocialPlateformThirdSec";
+import SocialPlateformFourthSec from "./socialplateform/SocialPlateformFourthSec";
+import SocialPlateformFifthSec from "./socialplateform/SocialPlateformFifthSec";
+import SocialPlateformSixthSec from "./socialplateform/SocialPlateformSixthSec";
+import SocialPlateformSeventhSec from "./socialplateform/SocialPlateformSeventhSec";
+import SocialPlateformEighthSec from "./socialplateform/SocialPlateformEighthSec";
+import SocialPlateformNinthSec from "./socialplateform/SocialPlateformNinthSec";
 const Socialplatforms = () => {
   const [accordion, setAccordion] = useState(false);
 
@@ -283,11 +287,7 @@ const Socialplatforms = () => {
       <section className="Communitybanner">
         <Container>
           <div className="Communitybanner__text">
-            <h1>Community</h1>
-            <p>
-              The Aleph Zero community is a globally distributed home to
-              developers, coin holders, and validators supporting the protocol.
-            </p>
+           <SocialPlateformFirstSec />
           </div>
         </Container>
       </section>
@@ -298,13 +298,7 @@ const Socialplatforms = () => {
           <Row>
             <Col md="4">
               <div className="communityPlatform__left">
-                <h2>
-                  Community <b>platforms</b>
-                </h2>
-                <p className="mt-4">
-                  Here's where you can engage with the community and get all the
-                  latest updates.
-                </p>
+               <SocialPlateformSecondSec />
               </div>
             </Col>
             <Col md="8">
@@ -445,13 +439,7 @@ const Socialplatforms = () => {
             <Row>
               <Col md={4}>
                 <div className="communityPlatform__left">
-                  <h2>
-                    Ambassador <b>Program</b>
-                  </h2>
-                  <p className="mt-4">
-                    Support the Aleph Zero core team through community and
-                    marketing initiatives while accumulating rewards.
-                  </p>
+                  <SocialPlateformThirdSec />
                   <button className="linkMore mt-4">
                     Learn More &nbsp;
                     <RightArrow />
@@ -499,20 +487,7 @@ const Socialplatforms = () => {
             <Row>
               <Col md={4}>
                 <div className="communityPlatform__left">
-                  <h2>
-                    Ecosystem
-                    <b>
-                      {" "}
-                      Funding <br />
-                      Program
-                    </b>
-                  </h2>
-                  <p className="mt-4">
-                    The Aleph Zero Ecosystem continues to grow fast. We’re
-                    looking to foster the development of projects on the network
-                    with a dedicated funding program dedicated to the most
-                    interesting initiatives.
-                  </p>
+                 <SocialPlateformFourthSec />
                   <button className="linkMore mt-4">
                     Learn More &nbsp;
                     <RightArrow />
@@ -542,14 +517,7 @@ const Socialplatforms = () => {
             <Row>
               <Col md={4}>
                 <div className="communityPlatform__left">
-                  <h2>
-                    <b>Bug Bounty</b> Program
-                  </h2>
-                  <p className="mt-4">
-                    Help us make the network better and safer. We’re offering
-                    rewards for builders who find bugs and potential
-                    vulnerabilities in our code.
-                  </p>
+                 <SocialPlateformFifthSec />
                   <button className="linkMore mt-4">
                     Coming Soon &nbsp;
                     <RightArrow />
@@ -578,13 +546,7 @@ const Socialplatforms = () => {
           <Row>
             <Col md="4">
               <div className="communityPlatform__left">
-                <h2>
-                  Latest <b>News</b>
-                </h2>
-                <p className="mt-4">
-                  The following are our most frequented and updated
-                  communication channels. You name it, we’ve got it!
-                </p>
+               <SocialPlateformSixthSec />
                 <button className="linkMore mt-4">
                   See all news &nbsp;
                   <LinkIcon />
@@ -594,41 +556,7 @@ const Socialplatforms = () => {
             <Col md="8">
               <div className="threeNews">
                 <Row>
-                  <Col md={4}>
-                    <CardNews
-                      img={news1}
-                      tag1="Ecosystem"
-                      tag2="Application"
-                      title=" Aleph Zero Collaborates with Coinfirm to Strengthen Transaction
-            Security and AML Compliance"
-                      avtar={avtar}
-                      avtarName="Mateusz Raczyński"
-                      date="May 18, 2023"
-                      btnText="Go to article"
-                    />
-                  </Col>
-                  <Col md={4}>
-                    <CardNews
-                      img={news2}
-                      tag1="Application"
-                      title=" OnFinality expands offering to Aleph Zero RPC nodes"
-                      avtar={avtar2}
-                      avtarName="Daniel Ozluer"
-                      date="May 10, 2023"
-                      btnText="Go to article"
-                    />
-                  </Col>
-                  <Col md={4}>
-                    <CardNews
-                      img={news3}
-                      tag1="Progress"
-                      title=" Monthly Update: EFP, Dashboard, Dev Portal, and more"
-                      avtar={avtar}
-                      avtarName="Mateusz Raczyński"
-                      date="May 8, 2023"
-                      btnText="Go to article"
-                    />
-                  </Col>
+                 <SocialPlateformSeventhSec />
                 </Row>
               </div>
             </Col>
@@ -642,13 +570,7 @@ const Socialplatforms = () => {
           <Row>
             <Col md="4">
               <div className="communityPlatform__left">
-                <h2>
-                  Latest <b>Video</b>
-                </h2>
-                <p className="mt-4">
-                  Learn about Aleph Zero technology, watch tutorials, catch up
-                  with event recaps, and more.
-                </p>
+               <SocialPlateformEighthSec/>
                 <button className="linkMore mt-4">
                   Go to YouTube channel &nbsp;
                   <LinkIcon />
@@ -658,31 +580,8 @@ const Socialplatforms = () => {
             <Col md="8">
               <div className="threeNews">
                 <Row>
-                  <Col md="4">
-                    <CardVideo
-                      img={video1}
-                      title="Without being SNARKy, what's coming up for blockchain privacy in the
-          next few years?"
-                      date="Jan 14, 2023"
-                      onClick={()=> setOpen(true)}
-                    />
-                  </Col>
-                  <Col md="4">
-                    <CardVideo
-                      img={video2}
-                      title="Transaction privacy vs. compliance - technical aspects of the dilemma"
-                      date="Nov 4, 2022"
-                      onClick={()=> setOpen(true)}
-                    />
-                  </Col>
-                  <Col md="4">
-                    <CardVideo
-                      img={video3}
-                      title="Validating on Aleph Zero - part I - node setup"
-                      date="Sep 8, 2022"
-                      onClick={()=> setOpen(true)}
-                    />
-                  </Col>
+                <SocialPlateformNinthSec setOpen={setOpen} />
+                 
                 </Row>
               </div>
             </Col>

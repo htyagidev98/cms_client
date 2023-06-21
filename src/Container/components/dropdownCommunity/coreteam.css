@@ -105,6 +105,7 @@ body {
 .swiper-container .swiper-wrapper .swiper-slide {
   position: relative;
   margin-top: 40px;
+  padding-bottom: 20px;
 }
 
 .swiper-container>.swiper-wrapper>.swiper-slide:before {
@@ -132,13 +133,11 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 38px;
+  top: 35px;
   color: #2f4252;
 }
 
-.slider-section .swiper-container.swiper2 .swiper-slide {
-  opacity: 0.6 !important;
-}
+
 
 .slider-section .swiper-container.swiper2 .swiper-slide.swiper-slide-active {
   opacity: 1 !important;
@@ -162,8 +161,7 @@ body {
 }
 
 .top-left-card-sec:after {
-
-  bottom: 0;
+  bottom: 34px;
   position: absolute;
   left: calc(100% - 0.5px);
   border-width: 24px 0 0 20px;
@@ -195,7 +193,7 @@ body {
 }
 
 .card-content {
-  padding: 15px;
+  padding: 15px 15px 50px;
   background-color: #14202a;
   text-align: left;
   border: 1px solid #1b2b38;
@@ -283,7 +281,7 @@ span.status-bar {
   text-align: right;
   display: inline-block;
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
   letter-spacing: 2px;
 }
 
@@ -295,7 +293,7 @@ span.status-bar {
 }
 
 .destination-content h4 {
-  font-size: 27px;
+  font-size: 24px;
   font-weight: 400;
 }
 
@@ -305,7 +303,7 @@ span.status-bar {
 
 .destination-content {
   background-color: #fff;
-  padding: 27px;
+  padding: 23px;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
@@ -757,7 +755,6 @@ body {
 }
 
 .static-card {
-  width: 20%;
   color: #fff;
   text-align: center;
 }
@@ -1082,7 +1079,22 @@ body {
   border-bottom-color: transparent;
   border-right-color: transparent;
 }
+.left-modal-img img {
+	width: 100%;
+}
+.slick-dots{
+  bottom: -20px;
+}
+.heading-content p{
+  margin-bottom: 0px;
+}
+.slick-dots li.slick-active button::before{
+  color: #00eac7;
+}
 
+.zindex{
+  z-index: -1 !important;
+}
 /**/
 
 

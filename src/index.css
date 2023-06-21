@@ -29,3 +29,7 @@ code {
     object-fit: cover;
 }
 
+.dangerios_div p{
+  margin-bottom: 0 !important;
+}
+

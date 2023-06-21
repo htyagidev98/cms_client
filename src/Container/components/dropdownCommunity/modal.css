@@ -1,0 +1,20 @@
+.left-modal-img img{
+	max-width: 100%;
+}
+.common_line {
+    border-left: 2px solid #00eac7;
+}
+.modal-content-sec{
+	padding: 30px;
+}
+.heading-content p{
+	margin-bottom: 0px;
+}
+.modal-content-sec h6{
+	text-transform: uppercase;
+	font-weight: 100;
+}
+.heading-content p {
+    font-size: 13px;
+    color: #273847;
+}

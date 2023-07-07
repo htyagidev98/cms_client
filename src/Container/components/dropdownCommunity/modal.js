@@ -5,17 +5,12 @@ import { ReactComponent as LinkArrow } from "../../assets/box-arrow-up-right.svg
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import slider1 from '../../assets/slider1/slider1.jpg';
-import slider2 from '../../assets/slider1/slider2.jpg';
-import slider3 from '../../assets/slider1/slider3.jpg';
-import slider4 from "../../assets/slider1/slider4.jpg";
-import cardinal from "../../assets/cardinal.jpg";
+
 
 
 const BoxModal = (props) => {
 
   const {objectModalData}= props
-  console.log('datamodalfsdfsdf', props.objectModalData)
 
   var settings = {
     dots: true,
@@ -45,11 +40,7 @@ const BoxModal = (props) => {
                 <div class="left-modal-img">
                   <img src={objectModalData.image_url} alt="" />
                 </div>
-                {/* <div class="left-modal-img">
-
-      <img src={cardinal} alt=""/>
-      </div>
-			 */}
+            
               </Slider>
             </div>
             <div class="col-lg-6 col-12">

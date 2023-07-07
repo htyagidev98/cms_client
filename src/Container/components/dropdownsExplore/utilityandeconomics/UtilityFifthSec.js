@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import FifthSecUtilityModal from './FifthSecUtilityModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const UtilityFifthhSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const UtilityFifthhSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/utility/finma/get")
+          const res= await axios.get(`${BASE_URL}/utility/finma/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

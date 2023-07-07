@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import FourthSecPressKitModal from './FourthSecPressKitModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const PressKitFourthSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const PressKitFourthSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/press/boilerplates/get")
+          const res= await axios.get(`${BASE_URL}/press/boilerplates/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

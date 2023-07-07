@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import EighthSecFundingModal from './EighthSecFundingModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const FundingEightSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const FundingEightSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/build/consideration/get")
+          const res= await axios.get(`${BASE_URL}/build/consideration/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

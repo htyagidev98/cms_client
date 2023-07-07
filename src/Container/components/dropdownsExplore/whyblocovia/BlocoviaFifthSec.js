@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import FifthSecModal from './FifthSecModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const BlocoviaFifthSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,9 +18,8 @@ const BlocoviaFifthSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/explore/privacy/get")
+          const res= await axios.get(`${BASE_URL}/explore/privacy/get`)
           setCardData(res.data.responseData);
-           console.log('res third', res.data.responseData)
        } catch (error) {
           console.log(error)
        }

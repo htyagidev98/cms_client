@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import FourthSecCoreTeamModal from './FourthSecCoreTeamModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const CoreTeamFourthSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const CoreTeamFourthSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/team/founding/get")
+          const res= await axios.get(`${BASE_URL}/team/founding/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

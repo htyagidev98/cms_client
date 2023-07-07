@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { BsArrowRight, BsBoxArrowUpRight, BsFileArrowDown } from 'react-icons/bs'
 import intro from '../../../../assets/intro-one.svg'
 import ThirdSecBuildDevModal from './ThirdSecBuildDevModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const BuildDevThirdSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -19,7 +20,7 @@ const BuildDevThirdSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/dev/zero/card/get")
+            const res = await axios.get(`${BASE_URL}/dev/zero/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

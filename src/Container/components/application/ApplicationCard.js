@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaRegEdit } from 'react-icons/fa'
 import ApplicationCardModal from './ApplicationCardModal';
 import { useSelector } from 'react-redux'
+import { BASE_URL } from '../../../utility/Helper';
 
 const ApplicationCard = () => {
 const navigate = useNavigate();
@@ -18,7 +19,7 @@ const [CardModal, setCardModal]=useState(false);
 
  const fetchHeroData=async()=>{
     try {
-       const res= await fetch("/application/get")
+       const res= await fetch(`${BASE_URL}/application/get`)
        const data= await res.json();
        setCardData(data.responseData);
 

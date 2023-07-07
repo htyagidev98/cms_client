@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import ThirdSecModal from './ThirdSecModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const BlocoviaThirdSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,9 +18,8 @@ const BlocoviaThirdSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/explore/scalability/get")
+          const res= await axios.get(`${BASE_URL}/explore/scalability/get`)
           setCardData(res.data.responseData);
-           console.log('res third', res.data.responseData)
        } catch (error) {
           console.log(error)
        }

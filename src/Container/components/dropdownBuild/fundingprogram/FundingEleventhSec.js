@@ -12,6 +12,7 @@ import fundingTutorial from '../../../assets/funding-tutorial.svg';
 import fundingMetversa from '../../../assets/funding-metvera.svg';
 
 import EleventhSecFundingModal from './EleventhSecFundingModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const FundingEleventhSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -26,7 +27,7 @@ const FundingEleventhSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/build/request/card/get")
+            const res = await axios.get(`${BASE_URL}/build/request/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

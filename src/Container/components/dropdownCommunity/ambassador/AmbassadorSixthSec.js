@@ -6,6 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 
 import SixthSecAmbassadorModal from './SixthSecAmbassadorModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const AmbassadorSixthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -20,7 +21,7 @@ const AmbassadorSixthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/ambassador/perks/card/get")
+            const res = await axios.get(`${BASE_URL}/ambassador/perks/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

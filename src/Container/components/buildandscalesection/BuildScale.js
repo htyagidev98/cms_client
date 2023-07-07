@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux'
 import { NavLink} from 'react-router-dom'
 import './buildscale.css'
 import BuildScaleModal from './BuildScaleModal'
+import { BASE_URL } from '../../../utility/Helper'
+
 const BuildScale = () => {
    const [BuildScale, setBuildScale]= useState(false);
    const [data, setData]= useState([]);
@@ -15,7 +17,7 @@ const BuildScale = () => {
 
    const fetchData=async()=>{
       try {
-        const res= await axios.get("/bulid/scale/get")
+        const res= await axios.get(`${BASE_URL}/bulid/scale/get`)
         setData(res.data.responseData);
       } catch (error) {
         console.log(error)

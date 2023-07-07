@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import FirstSecUpcomingEventModal from './FirstSecUpcomingEventModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const UpcomingEventFirstSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const UpcomingEventFirstSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/upcoming-events/event/get")
+          const res= await axios.get(`${BASE_URL}/upcoming-events/event/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

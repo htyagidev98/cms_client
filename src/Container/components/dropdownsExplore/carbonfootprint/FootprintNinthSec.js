@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import NinthSecFootprintModal from './NinthSecFootprintModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const FootprintNinthSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const FootprintNinthSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/carbon-negative/agriculture/get")
+          const res= await axios.get(`${BASE_URL}/carbon-negative/agriculture/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

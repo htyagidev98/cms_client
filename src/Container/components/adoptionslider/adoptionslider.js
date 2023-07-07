@@ -5,6 +5,7 @@ import slideoneImg from '../../assets/slide1.svg';
 import AdoptionModal from "./AdoptionModal";
 import { FaRegEdit } from "react-icons/fa";
 import { useSelector } from 'react-redux'
+import { BASE_URL } from "../../../utility/Helper";
 
 const AdoptionSlider = () => {
 
@@ -21,7 +22,7 @@ const AdoptionSlider = () => {
 
   const fetchHeroData = async () => {
     try {
-      const res = await fetch("/driving/animate/get")
+      const res = await fetch(`${BASE_URL}/driving/animate/get`)
       const data = await res.json();
       setCardData(data.responseData);
 

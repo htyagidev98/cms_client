@@ -31,6 +31,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import AddSecondUpcomingEventModal from "./upcommingevent/TestAddSecondUpcomingEventModal";
 import TestAddSecondUpcomingEventModal from "./upcommingevent/TestAddSecondUpcomingEventModal";
+import { BASE_URL } from "../../../utility/Helper";
 
 const Events = () => {
   const [flag, setFlag] = useState(false);
@@ -68,7 +69,7 @@ const Events = () => {
 
   const fetchHeroData = async () => {
     try {
-      const res = await axios.get("/upcoming-events/gallery/card/get")
+      const res = await axios.get(`${BASE_URL}/upcoming-events/gallery/card/get`)
       setCardData(res.data.responseData);
 
 
@@ -85,7 +86,7 @@ const Events = () => {
 
   const fetchSecHeroData = async () => {
     try {
-        const res = await axios.get("/upcoming-events/event/card/get");
+        const res = await axios.get(`${BASE_URL}/upcoming-events/event/card/get`);
         setCardSecData(res.data.responseData);
     } catch (error) {
         console.log(error);

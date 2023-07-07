@@ -4,6 +4,7 @@ import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import { ReactComponent as ArrowLeftIcon } from "../../../assets/arrow-left.svg";
 import SeventhSecAmbassadorModal from './SeventhSecAmbassadorModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const AmbassadorSeventhSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -18,7 +19,7 @@ const AmbassadorSeventhSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/ambassador/require/get")
+            const res = await axios.get(`${BASE_URL}/ambassador/require/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

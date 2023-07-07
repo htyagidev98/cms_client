@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import SecondSecSocialPlateformModal from './SecondSecSocialPlateformModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const SocialPlateformSecondSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const SocialPlateformSecondSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/community-page/platforms/get")
+          const res= await axios.get(`${BASE_URL}/community-page/platforms/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

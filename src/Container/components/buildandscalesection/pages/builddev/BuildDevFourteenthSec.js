@@ -5,6 +5,7 @@ import {BsArrowRight,BsBoxArrowUpRight,BsDiscord,BsFileArrowDown, BsGithub} from
 
 import { useSelector } from 'react-redux'
 import FourteenthSecBuildDevModal from './FourteenthSecBuildDevModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const BuildDevFourteenthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -19,7 +20,7 @@ const BuildDevFourteenthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/dev/stay/card/get")
+            const res = await axios.get(`${BASE_URL}/dev/stay/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

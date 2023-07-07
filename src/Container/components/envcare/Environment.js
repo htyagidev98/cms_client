@@ -5,10 +5,11 @@ import './environment.css'
 import { FaRegEdit } from 'react-icons/fa'
 import EnvironmentModal from './EnvironmentModal'
 import { useSelector } from 'react-redux'
+import { BASE_URL } from '../../../utility/Helper'
 
 const Environment = () => {
 
-   const [CardModal, setCardModal]=useState(false);   
+ const [CardModal, setCardModal]=useState(false);   
  const [cardData, setCardData]= useState({});
  const [objectData, setObjectData]= useState({})
  const [updateUi, setUpdateUi]= useState(false);
@@ -20,7 +21,7 @@ const Environment = () => {
 
  const fetchHeroData=async()=>{
     try {
-       const res= await fetch("/footprint/get")
+       const res= await fetch(`${BASE_URL}/footprint/get`)
        const data= await res.json();
        setCardData(data.responseData);
 

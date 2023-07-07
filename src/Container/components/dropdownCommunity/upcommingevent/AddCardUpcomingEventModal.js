@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 import { toast } from 'react-toastify';
+import { BASE_URL } from '../../../../utility/Helper';
 const AddCardUpcomingEventModal = ({ show, hide, setUpdateUi }) => {
     const [inputData, setInputData] = useState({
         id: "",
@@ -40,7 +41,7 @@ const AddCardUpcomingEventModal = ({ show, hide, setUpdateUi }) => {
             toast.error('please fill the data')
         }
         try {
-            const result = await axios.post('/upcoming-events/gallery/card/add', inputData, {
+            const result = await axios.post(`${BASE_URL}/upcoming-events/gallery/card/add`, inputData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }

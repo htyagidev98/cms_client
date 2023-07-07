@@ -5,6 +5,7 @@ import { RxCross2 } from 'react-icons/rx'
 import { useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 import TenthSecCoreTeamModal from './TenthSecCoreTeamModal';
+import { BASE_URL } from '../../../../utility/Helper';
 const CoreTeamTenthSec = ({ cardData, setUpdateUi, gettingData }) => {
     const { contactData } = useSelector((state) => state.contact);
     const [CardModal, setCardModal] = useState(false);
@@ -22,7 +23,7 @@ const CoreTeamTenthSec = ({ cardData, setUpdateUi, gettingData }) => {
 
     const trashData = async (id) => {
         try {
-            const response = await axios.delete(`/team/business/card/delete?_id=${id}`);
+            const response = await axios.delete(`${BASE_URL}/team/business/card/delete?_id=${id}`);
             if (response.status === 200) {
 
                 toast.success('Card Deleted Successfully');

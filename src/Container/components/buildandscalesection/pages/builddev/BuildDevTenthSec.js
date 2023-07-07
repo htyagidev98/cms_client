@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import TenthSecBuildDevModal from './TenthSecBuildDevModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const BuildDevTenthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -17,7 +18,7 @@ const BuildDevTenthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/dev/tools/card/get")
+            const res = await axios.get(`${BASE_URL}/dev/tools/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

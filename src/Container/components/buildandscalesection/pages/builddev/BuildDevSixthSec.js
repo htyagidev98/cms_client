@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import SixthSecBuildDevModal from './SixthSecBuildDevModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 
-const BuildDevFirstSec = () => {
+const BuildDevSixthSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
     const [CardModal, setCardModal]=useState(false);   
     const [cardData, setCardData]= useState({});
@@ -17,7 +18,7 @@ const BuildDevFirstSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/dev/developer/get")
+          const res= await axios.get(`${BASE_URL}/dev/developer/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)
@@ -50,4 +51,4 @@ const BuildDevFirstSec = () => {
     )
 }
 
-export default BuildDevFirstSec;
+export default BuildDevSixthSec;

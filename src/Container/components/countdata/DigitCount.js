@@ -4,6 +4,7 @@ import DigitCountModal from './DigitCountModal';
 import { useSelector } from 'react-redux'
 import axios from 'axios'
 import {FaRegEdit} from 'react-icons/fa'
+import { BASE_URL } from '../../../utility/Helper';
 const DigitCount = () => {
   const [BuildScale, setBuildScale] = useState(false);
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ const DigitCount = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("/calculation/get")
+      const res = await axios.get(`${BASE_URL}/calculation/get`)
       setData(res.data.responseData);
     } catch (error) {
       console.log(error)

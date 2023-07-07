@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { FaRegEdit } from 'react-icons/fa';
 import CommunityModal from './CommunityModal'
+import { BASE_URL } from '../../../utility/Helper';
 const Compeople = () => {
    const {contactData} = useSelector((state)=> state.contact);
   const [CardModal, setCardModal]=useState(false);   
@@ -18,7 +19,7 @@ const Compeople = () => {
 
  const fetchHeroData=async()=>{
     try {
-       const res= await fetch("/community/get")
+       const res= await fetch(`${BASE_URL}/community/get`)
        const data= await res.json();
        setCardData(data.responseData);
 

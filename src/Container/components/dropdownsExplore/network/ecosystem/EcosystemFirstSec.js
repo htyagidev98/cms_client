@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import FirstSecEcosystemModal from './FirstSecEcosystemModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const EcosystemFirstSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const EcosystemFirstSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/ecosystem/ecosystem/get")
+          const res= await axios.get(`${BASE_URL}/ecosystem/ecosystem/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

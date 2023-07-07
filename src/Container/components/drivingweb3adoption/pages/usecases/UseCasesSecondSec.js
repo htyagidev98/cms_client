@@ -17,6 +17,7 @@ import transparent from '../../../../assets/public-document.svg';
 import database from '../../../../assets/database.svg';
 import tax from '../../../../assets/tax.svg';
 import iot from '../../../../assets/iot.svg';
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const UseCasesSecondSec = () => {
    const { contactData } = useSelector((state) => state.contact);
@@ -31,7 +32,7 @@ const UseCasesSecondSec = () => {
 
    const fetchHeroData = async () => {
       try {
-         const res = await axios.get("/use/cases/animated/get")
+         const res = await axios.get(`${BASE_URL}/use/cases/animated/get`)
          setCardData(res.data.responseData);
       } catch (error) {
          console.log(error)

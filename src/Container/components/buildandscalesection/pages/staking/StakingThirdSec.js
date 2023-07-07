@@ -10,6 +10,7 @@ import stayStaking from '../../../../assets/stay-staking.svg';
 
 
 import ThirdSecStakingModal from './ThirdSecStakingModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const StakingThirdSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -24,7 +25,7 @@ const StakingThirdSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/staking/staking/card/get")
+            const res = await axios.get(`${BASE_URL}/staking/staking/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

@@ -6,6 +6,7 @@ import './upcomingupgrade.css'
 import { FaRegEdit } from 'react-icons/fa'
 import UpcomingModal from './UpcomingModal'
 import { useSelector } from 'react-redux'
+import { BASE_URL } from '../../../utility/Helper'
 
 const Upcomingupgrades = () => {
 
@@ -22,7 +23,7 @@ const Upcomingupgrades = () => {
 
  const fetchHeroData=async()=>{
     try {
-       const res= await fetch("/network/get")
+       const res= await fetch(`${BASE_URL}/network/get`)
        const data= await res.json();
        setCardData(data.responseData);
 

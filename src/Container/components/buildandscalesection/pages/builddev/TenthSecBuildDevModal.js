@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 import { toast } from 'react-toastify';
+import { BASE_URL } from '../../../../../utility/Helper';
 const TenthSecBuildDevModal = ({ show, hide, objectData, setUpdateUi }) => {
     const [inputData, setInputData] = useState({
         id: "",
@@ -20,7 +21,7 @@ const TenthSecBuildDevModal = ({ show, hide, objectData, setUpdateUi }) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const result = await axios.put(`/dev/tools/card/update?_id=${id}`, inputData);
+            const result = await axios.put(`${BASE_URL}/dev/tools/card/update?_id=${id}`, inputData);
             if (result.status === 200) {
                 toast.success("Successfully Updated")
             }

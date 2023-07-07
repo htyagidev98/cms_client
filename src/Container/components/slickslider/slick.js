@@ -3,6 +3,7 @@ import { FaRegEdit } from "react-icons/fa";
 import Slider from "react-slick";
 import SilkModal from './SilkModal'
 import { useSelector } from 'react-redux'
+import { BASE_URL } from "../../../utility/Helper";
 
 const VerticalMode = () => {
 
@@ -19,7 +20,7 @@ const VerticalMode = () => {
 
  const fetchHeroData=async()=>{
     try {
-       const res= await fetch("/animated/get")
+       const res= await fetch(`${BASE_URL}/animated/get`)
        const data= await res.json();
        setCardData(data.responseData);
 

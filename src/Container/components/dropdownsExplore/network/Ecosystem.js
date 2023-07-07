@@ -13,6 +13,7 @@ import AddCardSecModal from './ecosystem/addcardmodal/AddCardSecModal'
 import EcoSystemThirdSec from './ecosystem/EcoSystemThirdSec'
 import EcoSystemSecondSec from './ecosystem/EcoSystemSecondSec'
 import axios from 'axios'
+import { BASE_URL } from '../../../../utility/Helper'
 
 
 
@@ -34,7 +35,7 @@ const Ecosystem = () => {
 
    const fetchHeroData = async () => {
       try {
-         const res = await axios.get("/ecosystem/imageCard/get")
+         const res = await axios.get(`${BASE_URL}/ecosystem/imageCard/get`)
          setCardData(res.data.responseData);
 
 

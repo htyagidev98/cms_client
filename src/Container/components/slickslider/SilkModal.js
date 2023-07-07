@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { setEdit } from '../../redux/slice/ContactSlice';
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { BASE_URL } from '../../../utility/Helper';
 
 const BlockoviaModal = ({ show, hide, objectData, setUpdateUi }) => {
     const [inputData, setInputData] = useState({
@@ -25,7 +26,7 @@ const BlockoviaModal = ({ show, hide, objectData, setUpdateUi }) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const result = await axios.put(`/animated/update?_id=${id}`, inputData);
+            const result = await axios.put(`${BASE_URL}/animated/update?_id=${id}`, inputData);
             if (result.status === 200) {
                 toast.success("Successfully Updated")
             }

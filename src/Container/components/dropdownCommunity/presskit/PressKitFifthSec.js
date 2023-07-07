@@ -6,6 +6,7 @@ import { BsArrowRight, BsBoxArrowUpRight, BsFileArrowDown } from 'react-icons/bs
 import {BiCopy, BiLinkExternal} from 'react-icons/bi'
 
 import FifthSecPressKitModal from './FifthSecPressKitModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const PressKitFifthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -20,7 +21,7 @@ const PressKitFifthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/press/boil/card/get")
+            const res = await axios.get(`${BASE_URL}/press/boil/card/get`)
             // console.log('cardData', res.data.responseData[0].title)
             setCardData(res.data.responseData);
         } catch (error) {

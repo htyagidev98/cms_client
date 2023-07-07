@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import './SignIn.css'
 import { addContact} from '../redux/slice/ContactSlice';
+import { BASE_URL } from '../../utility/Helper';
 const SignIn = () => {
     const navigate= useNavigate();
     const [formData, setFormData]= useState({
@@ -30,7 +31,7 @@ const SignIn = () => {
       e.preventDefault();
 
        try {
-         const res= await axios.post("/login", formData)
+         const res= await axios.post(`${BASE_URL}/login`, formData)
          if(res.status===200){
             dispatch(addContact(res.data.responseData));
             navigate('/');

@@ -7,6 +7,7 @@ import CardVideo from "../CardVideo";
 import video1 from "../../../assets/video1.jpg";
 
 import NinthSecSocialPlateformModal from './NinthSecSocialPlateformModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const SocialPlateformNinthSec = ({setOpen}) => {
     const { contactData } = useSelector((state) => state.contact);
@@ -21,7 +22,7 @@ const SocialPlateformNinthSec = ({setOpen}) => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/community-page/video/card/get")
+            const res = await axios.get(`${BASE_URL}/community-page/video/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

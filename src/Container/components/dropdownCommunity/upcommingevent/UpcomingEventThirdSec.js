@@ -7,6 +7,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ReactComponent as RightArrow } from "../../../assets/arrow-right.svg";
 import { toast } from 'react-toastify';
 import ThirdSecUpcomingEventModal from './ThirdSecUpcomingEventModal';
+import { BASE_URL } from '../../../../utility/Helper';
 const UpcomingEventThirdSec = ({ cardData, setUpdateUi, setModalShow, galleryFlag }) => {
     const { contactData } = useSelector((state) => state.contact);
     const [CardModal, setCardModal] = useState(false);
@@ -23,7 +24,7 @@ const UpcomingEventThirdSec = ({ cardData, setUpdateUi, setModalShow, galleryFla
 
     const trashData = async (id) => {
         try {
-            const response = await axios.delete(`/upcoming-events/gallery/card/delete?_id=${id}`);
+            const response = await axios.delete(`${BASE_URL}/upcoming-events/gallery/card/delete?_id=${id}`);
             if (response.status === 200) {
 
                 toast.success('Card Deleted Successfully');

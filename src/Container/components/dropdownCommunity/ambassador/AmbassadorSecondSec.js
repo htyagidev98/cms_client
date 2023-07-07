@@ -6,6 +6,7 @@ import { ReactComponent as ArrowLeftIcon } from "../../../assets/arrow-left.svg"
 import SecondSecAmbassadorModal from './SecondSecAmbassadorModal';
 import { Tilt } from "react-tilt";
 import ambImg5 from "../../../assets/ambassadors-backgrounds-decorations.png";
+import { BASE_URL } from '../../../../utility/Helper';
 
 
 const AmbassadorSecondSec = ({defaultOptions}) => {
@@ -21,7 +22,7 @@ const AmbassadorSecondSec = ({defaultOptions}) => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/ambassador/background/get")
+            const res = await axios.get(`${BASE_URL}/ambassador/background/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

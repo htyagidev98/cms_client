@@ -7,6 +7,7 @@ import ecosmall from '../../../../assets/eco-small.jpg'
 import azeroImage from '../../../../assets/azero-id.png'
 // import synor from '../../../assets/synor-img.jpg'
 import SecondSecEcosystemModal from './SecondSecEcosystemModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 const EcoSystemSecondSec = () => {
     const { contactData } = useSelector((state) => state.contact);
     const [CardModal, setCardModal] = useState(false);
@@ -20,7 +21,7 @@ const EcoSystemSecondSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/ecosystem/ecosystemCard/get")
+            const res = await axios.get(`${BASE_URL}/ecosystem/ecosystemCard/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

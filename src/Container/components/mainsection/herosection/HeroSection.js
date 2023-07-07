@@ -6,6 +6,7 @@ import {BsFileArrowDown, } from 'react-icons/bs'
 import {FaRegEdit} from 'react-icons/fa'
 import HeroSectionModal from './HeroSectionModal';
 import { useSelector} from 'react-redux';
+import { BASE_URL } from '../../../../utility/Helper';
 const HeroSection = () => {
  const [HeroModal, setHeroModal]=useState(false);   
  const [HeroData, setHeroData]= useState({});
@@ -19,7 +20,7 @@ const HeroSection = () => {
 
   const fetchHeroData=async()=>{
      try {
-        const res= await fetch("/hero/content/get")
+        const res= await fetch(`${BASE_URL}/hero/content/get`)
         const data= await res.json();
         setHeroData(data.responseData);
 

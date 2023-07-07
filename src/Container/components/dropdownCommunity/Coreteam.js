@@ -82,6 +82,7 @@ import EleventhSecBoxModal from "./coreteam/EleventhSecBoxModal";
 import CoreTeamTwelthSec from "./coreteam/CoreTeamTwelthSec";
 import CoreTeamThirteenthSec from "./coreteam/CoreTeamThirteenthSec";
 import CoreTeamFourteenthSec from "./coreteam/CoreTeamFourteenthSec";
+import { BASE_URL } from "../../../utility/Helper";
 const Coreteam = () => {
   const [showModal, setShowModal] = useState(false);
   const [objectModalData, setObjectModalData]=useState({}) 
@@ -142,7 +143,7 @@ const Coreteam = () => {
 
   const fetchHeroData = async () => {
     try {
-      const res = await axios.get("/team/founding/card/get")
+      const res = await axios.get(`${BASE_URL}/team/founding/card/get`)
       setCardData(res.data.responseData);
 
 
@@ -159,7 +160,7 @@ const Coreteam = () => {
 
   const fetchHeroDataEightSEc = async () => {
     try {
-      const res = await axios.get("/team/cardinal/card/get")
+      const res = await axios.get(`${BASE_URL}/team/cardinal/card/get`)
       setEightSecCardData(res.data.responseData);
 
 
@@ -176,7 +177,7 @@ const Coreteam = () => {
 
   const fetchHeroDataTenthSec = async () => {
     try {
-      const res = await axios.get("/team/business/card/get")
+      const res = await axios.get(`${BASE_URL}/team/business/card/get`)
       setTenthSecCardData(res.data.responseData);
 
 
@@ -192,7 +193,7 @@ const Coreteam = () => {
 
   const fetchHeroDataEleventhSec = async () => {
     try {
-      const res = await axios.get("/team/advisors/card/get")
+      const res = await axios.get(`${BASE_URL}/team/advisors/card/get`)
       setEleventhTenthSecCardData(res.data.responseData);
 
 

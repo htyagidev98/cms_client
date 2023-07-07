@@ -4,6 +4,7 @@ import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import PressKitThirdSec from './PressKitThirdSec';
 import SecondSecPressKitModal from './SecondSecPressKitModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const PressKitSecondSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -18,7 +19,7 @@ const PressKitSecondSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/press/profile/get")
+          const res= await axios.get(`${BASE_URL}/press/profile/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import SecondSecStakingModal from './SecondSecStakingModal';
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const StakingSecondSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const StakingSecondSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/staking/staking/content/get")
+          const res= await axios.get(`${BASE_URL}/staking/staking/content/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

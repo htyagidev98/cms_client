@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import SecondSecFootprintModal from './SecondSecFootprintModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const FootprintSecondSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const FootprintSecondSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/carbon-negative/green/get")
+          const res= await axios.get(`${BASE_URL}/carbon-negative/green/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

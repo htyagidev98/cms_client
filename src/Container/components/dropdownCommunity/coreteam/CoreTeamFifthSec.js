@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import cardImage from '../../../assets/synor-img.jpg'
 import { toast } from 'react-toastify';
 import FifthSecCoreTeamModal from './FifthSecCoreTeamModal';
+import { BASE_URL } from '../../../../utility/Helper';
 const CoreTeamFifthSec = ({ cardData, setUpdateUi ,gettingData}) => {
     const { contactData } = useSelector((state) => state.contact);
     const [CardModal, setCardModal] = useState(false);
@@ -23,7 +24,7 @@ const CoreTeamFifthSec = ({ cardData, setUpdateUi ,gettingData}) => {
 
     const trashData = async (id) => {
         try {
-            const response = await axios.delete(`/team/founding/card/delete?_id=${id}`);
+            const response = await axios.delete(`${BASE_URL}/team/founding/card/delete?_id=${id}`);
             if (response.status === 200) {
 
                 toast.success('Card Deleted Successfully');

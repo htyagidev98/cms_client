@@ -8,6 +8,7 @@ import fundingLayerTwo from '../../../assets/funding-layer-two.svg';
 import fundingLayerThree from '../../../assets/funding-layer-three.svg';
 
 import SeventhSecFundingModal from './SeventhSecFundingModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const FundingSeventhSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -22,7 +23,7 @@ const FundingSeventhSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/build/tierCard/get")
+            const res = await axios.get(`${BASE_URL}/build/tierCard/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

@@ -11,6 +11,7 @@ import avtar from "../../../assets/avtar.jpeg";
 
 import SeventhSecSocialPlateformModal from './SeventhSecSocialPlateformModal';
 import CardNews from '../CardNews';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const SocialPlateformSeventhSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -25,7 +26,7 @@ const SocialPlateformSeventhSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/community-page/news/card/get")
+            const res = await axios.get(`${BASE_URL}/community-page/news/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

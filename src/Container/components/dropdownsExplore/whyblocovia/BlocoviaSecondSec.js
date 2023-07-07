@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import SecondSecModal from './SecondSecModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 
 const BlocoviaSecondSec = () => {
@@ -18,7 +19,7 @@ const BlocoviaSecondSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/explore/paragraph/get")
+          const res= await axios.get(`${BASE_URL}/explore/paragraph/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

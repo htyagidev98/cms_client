@@ -10,6 +10,7 @@ import './blockovia.css'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import BlockoviaModal from './BlockoviaModal';
+import { BASE_URL } from '../../../utility/Helper';
 const Blockovia = () => {
   const { contactData } = useSelector((state) => state.contact);
   const [CardModal, setCardModal] = useState(false);
@@ -23,7 +24,7 @@ const Blockovia = () => {
 
   const fetchHeroData = async () => {
     try {
-      const res = await fetch("/animated/card/get")
+      const res = await fetch(`${BASE_URL}/animated/card/get`)
       const data = await res.json();
       setCardData(data.responseData);
 
@@ -54,7 +55,7 @@ const Blockovia = () => {
         </div>
         <div className="row">
           {
-            cardData.map((elm) => <div className="col-md-4 mx-auto hover_common">
+            cardData?.map((elm) => <div className="col-md-4 mx-auto hover_common">
               {
                 contactData.token && <span className='d-block text-end cursor' onClick={() => getData(elm)}><FaRegEdit /> </span>
               }

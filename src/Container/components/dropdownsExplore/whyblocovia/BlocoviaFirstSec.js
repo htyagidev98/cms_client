@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import FirstSecModal from './FirstSecModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const BlocoviaFirstSec = () => {
     const {contactData} = useSelector((state)=> state.contact);
@@ -17,7 +18,7 @@ const BlocoviaFirstSec = () => {
    
     const fetchHeroData=async()=>{
        try {
-          const res= await axios.get("/explore/blockovia/get")
+          const res= await axios.get(`${BASE_URL}/explore/blockovia/get`)
           setCardData(res.data.responseData);
        } catch (error) {
           console.log(error)

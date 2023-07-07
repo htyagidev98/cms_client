@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { setEdit } from '../../redux/slice/ContactSlice';
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { BASE_URL } from '../../../utility/Helper';
 
 const EnvironmentModal = ({ show, hide, objectData, setUpdateUi }) => {
     const [inputData, setInputData] = useState({
@@ -21,13 +22,13 @@ const EnvironmentModal = ({ show, hide, objectData, setUpdateUi }) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const result = await axios.put(`/footprint/update?_id=${id}`, inputData);
+            const result = await axios.put(`${BASE_URL}/footprint/update?_id=${id}`, inputData);
             if (result.status === 200) {
                 toast.success("Successfully Updated")
             }
             hide();
             setUpdateUi((prev)=>!prev);
-            dispatch(setEdit())
+            // dispatch(setEdit())
 
 
         } catch (error) {

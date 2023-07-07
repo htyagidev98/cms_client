@@ -9,6 +9,7 @@ import carbonIcon3 from '../../../assets/carbon-icon3.svg';
 // import carbonIcon2 from '../../assets/carbon-icon2.svg';
 // import carbonIcon3 from '../../assets/carbon-icon3.svg';
 import FifthSecFootprintModal from './FifthSecFootprintModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const FootprintFifthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -23,7 +24,7 @@ const FootprintFifthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/carbon-negative/numbers/get")
+            const res = await axios.get(`${BASE_URL}/carbon-negative/numbers/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

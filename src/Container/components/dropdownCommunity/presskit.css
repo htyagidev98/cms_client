@@ -235,6 +235,10 @@
     width: 80%;
     filter: brightness(1);
   }
+
+  .margin_auto{
+    margin-left: auto !important;
+  }
   /**/
 
   /* MEDIA QUERY */

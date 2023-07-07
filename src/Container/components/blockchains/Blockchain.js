@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import BlockChainModal from './BlockChainModal'
 import { FaRegEdit } from 'react-icons/fa'
+import { BASE_URL } from '../../../utility/Helper'
 
 const Blockchain = () => {
 const [ChainModal, setChainModal]=useState(false);   
@@ -21,7 +22,7 @@ const [ChainModal, setChainModal]=useState(false);
 
  const fetchHeroData=async()=>{
     try {
-       const res= await fetch("/blockchain/get")
+       const res= await fetch(`${BASE_URL}/blockchain/get`)
        const data= await res.json();
        setChainData(data.responseData);
 

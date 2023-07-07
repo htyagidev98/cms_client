@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsArrowRight, BsBoxArrowUpRight, BsDot, BsDownload, BsEnvelope, BsFileArrowDown } from 'react-icons/bs'
 import { BiCopy, BiLinkExternal } from 'react-icons/bi'
 import './presskit.css'
@@ -32,7 +32,101 @@ import PressKitFirstSec from './presskit/PressKitFirstSec'
 import PressKitSecondSec from './presskit/PressKitSecondSec'
 import PressKitFourthSec from './presskit/PressKitFourthSec'
 import PressKitFifthSec from './presskit/PressKitFifthSec'
+import PressKitSixthSec from './presskit/PressKitSixthSec'
+import axios from 'axios'
+import { useSelector } from 'react-redux'
+import AddSixthSecPressKitModal from './presskit/AddSixthSecPressKitModal'
+import PressKitSeventhSec from './presskit/PressKitSeventhSec'
+import AddSeventhSecPressKitModal from './presskit/AddSeventhSecPressKitModal'
+import PressKitEighthSec from './presskit/PressKitEighthSec'
+import PressKitNinthSec from './presskit/PressKitNinthSec'
+import PressKitTenthSec from './presskit/PressKitTenthSec'
+import AddTenthSecPressKitModal from './presskit/AddTenthSecPressKitModal'
+import { BASE_URL } from '../../../utility/Helper'
 const Presskit = () => {
+  const { contactData } = useSelector((state) => state.contact);
+
+  const [cardData, setCardData] = useState([]);
+  const [updateUi, setUpdateUi] = useState(false);
+  const [AddCardModal, setAddCardModal] = useState(false);
+  const [seventhSecCardData, setSeventhSecCardData] = useState([]);
+  const [seventhAddCardModal, setSeventhAddCardModal] = useState(false);
+  const [tenthSecCardData, setTenthSecCardData] = useState([]);
+  const [tenthAddCardModal, setTenthAddCardModal] = useState(false);
+
+
+  const closeModal = () => {
+    setAddCardModal(false);
+    setSeventhAddCardModal(false);
+    setTenthAddCardModal(false)
+  }
+
+  const showSecModal = () => {
+    setAddCardModal(true)
+
+  }
+  const fetchHeroData = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/press/press/news/get`)
+      // console.log('cardData', res.data.responseData[0].title)
+      setCardData(res.data.responseData);
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
+
+
+  const fetchHeroDataSeventhSec = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/press/brand/card/get`)
+      setSeventhSecCardData(res.data.responseData);
+
+
+    } catch (error) {
+      if (error.response.status === 404) {
+        setSeventhSecCardData([])
+        console.log(error);
+
+      }
+    }
+
+  }
+
+  const fetchHeroDataTenthSec = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/press/investors/card/get`)
+      setTenthSecCardData(res.data.responseData);
+
+
+    } catch (error) {
+      if (error.response.status === 404) {
+        setTenthSecCardData([])
+        console.log(error);
+
+      }
+    }
+
+  }
+
+  const showModalSeventh = () => {
+    setSeventhAddCardModal(true)
+  }
+
+
+  const showModalTenth = () => {
+    setTenthAddCardModal(true)
+  }
+
+  
+
+  useEffect(() => {
+    fetchHeroData();
+    fetchHeroDataSeventhSec();
+    fetchHeroDataTenthSec()
+  }, [updateUi])
+
   return (
     <>
 
@@ -83,122 +177,13 @@ const Presskit = () => {
                 <h2 className="side-border my-0">Blockovia<b> news</b> </h2>
               </div>
             </div>
-            <div className="col-md-8 right-text">
-              <h3 className="h3-title">2023</h3>
-              <div className="date-list-div">
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={decrypt} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src="images/cointelegraph.svg" />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-              </div>
-              <h3 className="h3-title">2022</h3>
-              <div className="date-list-div">
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-              </div>
-              <h3 className="h3-title">2021</h3>
-              <div className="date-list-div">
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-                <div className="date-list">
-                  <h5>2022-12-31</h5>
-                  <div className="logo-img">
-                    <img src={stockhead} />
-                  </div>
-                  <p>Proof of reserves is becoming more effective, but not all its challenges are technical</p>
-                </div>
-              </div>
-            </div>
+            {
+              contactData.token && <div className='text-end mb-2'><button onClick={() => showSecModal()} className='btn btn-primary btn-sm'>Add-Card</button> </div>
+            }
+            <PressKitSixthSec cardData={cardData} setUpdateUi={setUpdateUi} />
+            {
+              AddCardModal && <AddSixthSecPressKitModal show={AddCardModal} setUpdateUi={setUpdateUi} hide={closeModal} />
+            }
           </div>
           <div className="sperator-bottom">
 
@@ -211,95 +196,23 @@ const Presskit = () => {
           <div className="row">
             <div className="col-md-4 left-sticky">
               <div className="tutorial-small-card">
-                <h2 className="side-border my-0"><b>Brand</b>  assets</h2>
+                
+                <PressKitEighthSec />
+                
               </div>
             </div>
-            <div className="col-md-8 right-text">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="brand-card">
-                    <div className="img-brand">
-                      <img src={logo} />
-                    </div>
-                    <div className="text-brand">
-                      <h4>Logotype horizontal</h4>
-                      <div className="color-text">
-                        <span className="white">White</span>
-                        <span className="graphite">Graphite</span>
-                        <span className="black">Black</span>
-                      </div>
-                    </div>
-                    <div className="download-files">
-                      {/* <!-- put react icon  --> */}
-                      <span className="png-file"><BsDownload /> PNG</span>
-                      <span className="svg-file"><BsDownload /> SVG</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="brand-card">
-                    <div className="img-brand">
-                      <img src={logo} />
-                    </div>
-                    <div className="text-brand">
-                      <h4>Logotype horizontal</h4>
-                      <div className="color-text">
-                        <span className="white">White</span>
-                        <span className="graphite">Graphite</span>
-                        <span className="black">Black</span>
-                      </div>
-                    </div>
-                    <div className="download-files">
-                      {/* <!-- put react icon  --> */}
-                      <span className="png-file"><BsDownload /> PNG</span>
-                      <span className="svg-file"><BsDownload /> SVG</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="brand-card">
-                    <div className="img-brand">
-                      <img src={logo} />
-                    </div>
-                    <div className="text-brand">
-                      <h4>Logotype horizontal</h4>
-                      <div className="color-text">
-                        <span className="white">White</span>
-                        <span className="graphite">Graphite</span>
-                        <span className="black">Black</span>
-                      </div>
-                    </div>
-                    <div className="download-files">
-                      {/* <!-- put react icon  --> */}
-                      <span className="png-file"><BsDownload /> PNG</span>
-                      <span className="svg-file"><BsDownload /> SVG</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="brand-card">
-                    <div className="img-brand">
-                      <img src={logo} />
-                    </div>
-                    <div className="text-brand">
-                      <h4>Logotype horizontal</h4>
-                      <div className="color-text">
-                        <span className="white">White</span>
-                        <span className="graphite">Graphite</span>
-                        <span className="black">Black</span>
-                      </div>
-                    </div>
-                    <div className="download-files">
-                      {/* <!-- put react icon  --> */}
-                      <span className="png-file"><BsDownload /> PNG</span>
-                      <span className="svg-file"><BsDownload /> SVG</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
+          
+            <div className="col-md-8 right-text">
+            {
+              contactData.token && <div className='text-end mb-2'><button onClick={() => showModalSeventh()} className='btn btn-primary btn-sm'>Add-Card</button> </div>
+            }
+              <div className="row">
+                <PressKitSeventhSec cardData={seventhSecCardData} setUpdateUi={setUpdateUi} />
+                {
+                  seventhAddCardModal && <AddSeventhSecPressKitModal show={seventhAddCardModal} setUpdateUi={setUpdateUi} hide={closeModal} />
+                }
+              </div>
               <div className="more-btn">
                 <a href="#" className="common-btn">Download more assets</a>
               </div>
@@ -334,161 +247,18 @@ const Presskit = () => {
           <div className="row">
             <div className="col-md-4 left-sticky">
               <div className="tutorial-small-card">
-                <h2 className="side-border my-0"><b>Partners</b>  & investors</h2>
+                <PressKitNinthSec />
               </div>
             </div>
             <div className="col-md-8 right-text">
+            {
+              contactData.token && <div className='text-end mb-2'><button onClick={() => showModalTenth()} className='btn btn-primary btn-sm'>Add-Card</button> </div>
+            }
               <div className="partners-logo-row row">
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={black} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={one} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={two} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={three} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={four} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={five} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={six} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={seven} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={eight} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={nine} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={ten} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={eleven} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={twelve} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={thirteen} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={fourteen} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={fifteen} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={sixteen} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={sixteen} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={fifteen} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={one} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={two} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={three} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={four} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={five} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={six} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={seven} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={eight} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={nine} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={ten} />
-                  </div>
-                </div>
-                <div className="col-sm-4">
-                  <div className="investor-logo">
-                    <img src={eleven} />
-                  </div>
-                </div>
+                <PressKitTenthSec cardData={tenthSecCardData} setUpdateUi={setUpdateUi} />
+                {
+                  tenthAddCardModal && <AddTenthSecPressKitModal show={tenthAddCardModal} setUpdateUi={setUpdateUi} hide={closeModal} />
+                }
               </div>
             </div>
           </div>

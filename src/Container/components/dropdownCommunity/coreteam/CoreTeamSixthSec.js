@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import SixthSecCoreTeamModal from './SixthSecCoreTeamModal';
 import prize from "../../../assets/top25-prize.svg";
 import kpt from "../../../assets/kpt.svg";
+import { BASE_URL } from '../../../../utility/Helper';
 
 const CoreTeamSixthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -19,7 +20,7 @@ const CoreTeamSixthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/team/research/get")
+            const res = await axios.get(`${BASE_URL}/team/research/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

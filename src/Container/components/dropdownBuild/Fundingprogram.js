@@ -24,6 +24,7 @@ import AddFundingCardModal from './fundingprogram/fundingadddata/AddFundingCardM
 import FundingFifteenthSec from './fundingprogram/FundingFifteenthSec'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
+import { BASE_URL } from '../../../utility/Helper'
 const Fundingprogram = () => {
    const { contactData } = useSelector((state) => state.contact);
    const [AddCardModal, setAddCardModal] = useState(false);
@@ -41,7 +42,7 @@ const Fundingprogram = () => {
 
    const fetchHeroData = async () => {
       try {
-         const res = await axios.get("/build/supporter/card/get")
+         const res = await axios.get(`${BASE_URL}/build/supporter/card/get`)
          setCardData(res.data.responseData);
 
 

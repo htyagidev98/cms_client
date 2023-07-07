@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 import { toast } from 'react-toastify';
+import { BASE_URL } from '../../../../utility/Helper';
 const AddTenthSecCoreTeamModal = ({ show, hide, setUpdateUi }) => {
     const [inputData, setInputData] = useState({
         id: "",
@@ -41,7 +42,7 @@ const AddTenthSecCoreTeamModal = ({ show, hide, setUpdateUi }) => {
             toast.error('please fill the data')
         }
         try {
-            const result = await axios.post('/team/business/card/add', inputData, {
+            const result = await axios.post(`${BASE_URL}/team/business/card/add`, inputData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }

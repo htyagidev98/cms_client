@@ -4,6 +4,7 @@ import { FaRegEdit } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 import { BsArrowRight, BsBoxArrowUpRight, BsFileArrowDown } from 'react-icons/bs'
 import FifthSecFundingModal from './FifthSecFundingModal';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const FundingFifthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -18,7 +19,7 @@ const FundingFifthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/build/resourceCard/get")
+            const res = await axios.get(`${BASE_URL}/build/resourceCard/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)

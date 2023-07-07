@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import AdoptionSlider from '../adoptionslider/adoptionslider.js';
 import DrivingModal from './DrivingModal';
 import { FaRegEdit } from 'react-icons/fa';
+import { BASE_URL } from '../../../utility/Helper';
 const Driving = () => {
 const {contactData} = useSelector((state)=> state.contact);
  const [CardModal, setCardModal]=useState(false);   
@@ -18,7 +19,7 @@ const {contactData} = useSelector((state)=> state.contact);
 
  const fetchHeroData=async()=>{
     try {
-       const res= await fetch("/drivingtext/get")
+       const res= await fetch(`${BASE_URL}/drivingtext/get`)
        const data= await res.json();
        setCardData(data.responseData);
 

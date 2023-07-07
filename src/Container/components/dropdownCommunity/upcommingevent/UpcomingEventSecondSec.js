@@ -11,6 +11,7 @@ import SecondSecUpcomingEventModal from './SecondSecUpcomingEventModal';
 import { CardEvent } from '../CardNews';
 import { RxCross2 } from 'react-icons/rx';
 import { toast } from 'react-toastify';
+import { BASE_URL } from '../../../../utility/Helper';
 
 const UpcomingEventSecondSec = ({ setOpen, flag, cardData, setUpdateUi }) => {
     const { contactData } = useSelector((state) => state.contact);
@@ -31,7 +32,7 @@ const UpcomingEventSecondSec = ({ setOpen, flag, cardData, setUpdateUi }) => {
 
     const trashData = async (id) => {
         try {
-            const response = await axios.delete(`/upcoming-events/event/card/delete?_id=${id}`);
+            const response = await axios.delete(`${BASE_URL}/upcoming-events/event/card/delete?_id=${id}`);
             if (response.status === 200) {
 
                 toast.success('Card Deleted Successfully');

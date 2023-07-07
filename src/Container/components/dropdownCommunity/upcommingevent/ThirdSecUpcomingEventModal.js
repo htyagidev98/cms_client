@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 import { toast } from 'react-toastify';
+import { BASE_URL } from '../../../../utility/Helper';
 const ThirdSecUpcomingEventModal = ({ show, hide, objectData, setUpdateUi }) => {
     const [inputData, setInputData] = useState({
         id: "",
@@ -31,7 +32,7 @@ const ThirdSecUpcomingEventModal = ({ show, hide, objectData, setUpdateUi }) => 
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const result = await axios.put(`/upcoming-events/gallery/card/update?_id=${id}`, inputData, {
+            const result = await axios.put(`${BASE_URL}/upcoming-events/gallery/card/update?_id=${id}`, inputData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }

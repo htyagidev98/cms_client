@@ -7,6 +7,7 @@ import testnet from '../../../../assets/testnet.svg'
 import explorer from '../../../../assets/explorer.svg'
 import wallets from '../../../../assets/wallet.svg'
 import documentation from '../../../../assets/documentation.svg'
+import { BASE_URL } from '../../../../../utility/Helper';
 
 const BuildDevTwelthSec = () => {
     const { contactData } = useSelector((state) => state.contact);
@@ -21,7 +22,7 @@ const BuildDevTwelthSec = () => {
 
     const fetchHeroData = async () => {
         try {
-            const res = await axios.get("/dev/additional/card/get")
+            const res = await axios.get(`${BASE_URL}/dev/additional/card/get`)
             setCardData(res.data.responseData);
         } catch (error) {
             console.log(error)
